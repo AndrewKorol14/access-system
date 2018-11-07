@@ -19,6 +19,17 @@ namespace access_system
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            NewBuildingCreationForm newBuildingCreationForm = new NewBuildingCreationForm();
+            newBuildingCreationForm.Show();
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -64,13 +64,13 @@
             // newBuildingToolStripMenuItem
             // 
             this.newBuildingToolStripMenuItem.Name = "newBuildingToolStripMenuItem";
-            this.newBuildingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newBuildingToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.newBuildingToolStripMenuItem.Text = "New building";
             // 
             // openBuildingToolStripMenuItem
             // 
             this.openBuildingToolStripMenuItem.Name = "openBuildingToolStripMenuItem";
-            this.openBuildingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openBuildingToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.openBuildingToolStripMenuItem.Text = "Open building";
             // 
             // helpToolStripMenuItem
@@ -84,7 +84,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // button1
@@ -97,6 +97,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "New building";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -123,6 +124,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartForm";
             this.Text = "Access system v1.0.0";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
