@@ -64,14 +64,16 @@
             // newBuildingToolStripMenuItem
             // 
             this.newBuildingToolStripMenuItem.Name = "newBuildingToolStripMenuItem";
-            this.newBuildingToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.newBuildingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newBuildingToolStripMenuItem.Text = "New building";
+            this.newBuildingToolStripMenuItem.Click += new System.EventHandler(this.newBuildingToolStripMenuItem_Click);
             // 
             // openBuildingToolStripMenuItem
             // 
             this.openBuildingToolStripMenuItem.Name = "openBuildingToolStripMenuItem";
-            this.openBuildingToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.openBuildingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openBuildingToolStripMenuItem.Text = "Open building";
+            this.openBuildingToolStripMenuItem.Click += new System.EventHandler(this.openBuildingToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

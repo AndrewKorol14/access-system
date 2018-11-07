@@ -19,7 +19,11 @@ namespace access_system
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -31,6 +35,21 @@ namespace access_system
         private void StartForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void newBuildingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewBuildingCreationForm newBuildingCreationForm = new NewBuildingCreationForm();
+            newBuildingCreationForm.Show();
+        }
+
+        private void openBuildingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
