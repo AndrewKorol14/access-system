@@ -26,5 +26,25 @@ namespace access_system
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Building_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
