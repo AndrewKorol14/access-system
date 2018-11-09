@@ -52,6 +52,12 @@
     <Compile Include="Building.Designer.cs">
       <DependentUpon>Building.cs</DependentUpon>
     </Compile>
+    <Compile Include="CardCreationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardCreationForm.Designer.cs">
+      <DependentUpon>CardCreationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewBuildingCreationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Building.resx">
       <DependentUpon>Building.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardCreationForm.resx">
+      <DependentUpon>CardCreationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuildingCreationForm.resx">
       <DependentUpon>NewBuildingCreationForm.cs</DependentUpon>
