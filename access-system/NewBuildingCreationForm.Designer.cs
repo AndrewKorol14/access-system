@@ -39,37 +39,46 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.AliceBlue;
-            this.textBox3.Location = new System.Drawing.Point(277, 108);
+            this.textBox3.BackColor = System.Drawing.Color.Silver;
+            this.textBox3.Location = new System.Drawing.Point(316, 128);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 0;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(106, 30);
+            this.label4.BackColor = System.Drawing.Color.Gray;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(57, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(335, 18);
+            this.label4.Size = new System.Drawing.Size(470, 24);
             this.label4.TabIndex = 1;
             this.label4.Text = "Enter the number of floors and rooms on the floor";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(106, 109);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(79, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Number of floors:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label6.Location = new System.Drawing.Point(37, 196);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(45, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(209, 18);
             this.label6.TabIndex = 3;
@@ -78,27 +87,30 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.AliceBlue;
-            this.textBox4.Location = new System.Drawing.Point(277, 195);
+            this.textBox4.BackColor = System.Drawing.Color.Silver;
+            this.textBox4.Location = new System.Drawing.Point(316, 216);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.AliceBlue;
+            this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Location = new System.Drawing.Point(212, 281);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(216, 306);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 23);
+            this.button2.Size = new System.Drawing.Size(138, 35);
             this.button2.TabIndex = 5;
             this.button2.Text = "Create";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NewBuildingCreationForm
             // 
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(557, 359);
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(576, 424);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
