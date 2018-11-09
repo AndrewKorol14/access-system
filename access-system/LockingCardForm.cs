@@ -16,5 +16,15 @@ namespace access_system
         {
             InitializeComponent();
         }
+
+        private void LockingCardForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
