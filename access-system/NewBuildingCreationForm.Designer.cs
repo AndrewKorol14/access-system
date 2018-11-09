@@ -42,7 +42,7 @@
             this.textBox3.BackColor = System.Drawing.Color.AliceBlue;
             this.textBox3.Location = new System.Drawing.Point(277, 108);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 0;
             // 
             // label4
@@ -51,7 +51,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label4.Location = new System.Drawing.Point(147, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(274, 15);
+            this.label4.Size = new System.Drawing.Size(335, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Enter the number of floors and rooms on the floor";
             // 
@@ -61,7 +61,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label5.Location = new System.Drawing.Point(106, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 15);
+            this.label5.Size = new System.Drawing.Size(124, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Number of floors:";
             // 
@@ -71,7 +71,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label6.Location = new System.Drawing.Point(37, 196);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 15);
+            this.label6.Size = new System.Drawing.Size(209, 18);
             this.label6.TabIndex = 3;
             this.label6.Text = "Number of rooms on the floor:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -81,7 +81,7 @@
             this.textBox4.BackColor = System.Drawing.Color.AliceBlue;
             this.textBox4.Location = new System.Drawing.Point(277, 195);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 4;
             // 
             // button2
