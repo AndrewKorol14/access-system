@@ -58,6 +58,12 @@
     <Compile Include="CardCreationForm.Designer.cs">
       <DependentUpon>CardCreationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LockingCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LockingCardForm.Designer.cs">
+      <DependentUpon>LockingCardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewBuildingCreationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CardCreationForm.resx">
       <DependentUpon>CardCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LockingCardForm.resx">
+      <DependentUpon>LockingCardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuildingCreationForm.resx">
       <DependentUpon>NewBuildingCreationForm.cs</DependentUpon>
