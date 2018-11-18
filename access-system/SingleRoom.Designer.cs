@@ -46,12 +46,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(277, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 18);
+            this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Floor number:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -59,63 +59,67 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(277, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 18);
+            this.label2.Size = new System.Drawing.Size(90, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Room number:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(461, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 18);
+            this.label3.Size = new System.Drawing.Size(27, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "__";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.Location = new System.Drawing.Point(461, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 18);
+            this.label4.Size = new System.Drawing.Size(27, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "__";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(277, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.Size = new System.Drawing.Size(79, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Room name:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(277, 271);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.Size = new System.Drawing.Size(83, 15);
             this.label6.TabIndex = 6;
             this.label6.Text = "Access mode:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Black;
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(285, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 18);
+            this.label7.Size = new System.Drawing.Size(69, 15);
             this.label7.TabIndex = 8;
             this.label7.Text = "Room type:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -123,11 +127,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Black;
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(285, 357);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 18);
+            this.label8.Size = new System.Drawing.Size(66, 15);
             this.label8.TabIndex = 12;
             this.label8.Text = "Special ID:";
             // 
@@ -136,7 +140,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(421, 141);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 14;
             // 
             // comboBox2
@@ -144,13 +148,13 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(421, 191);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 26);
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 15;
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.Black;
-            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox1.BackColor = System.Drawing.Color.White;
+            this.checkedListBox1.ForeColor = System.Drawing.Color.Black;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Security",
@@ -160,13 +164,13 @@
             "Staff"});
             this.checkedListBox1.Location = new System.Drawing.Point(421, 244);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(121, 80);
+            this.checkedListBox1.Size = new System.Drawing.Size(121, 68);
             this.checkedListBox1.TabIndex = 16;
             // 
             // checkedListBox2
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.Black;
-            this.checkedListBox2.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox2.BackColor = System.Drawing.Color.White;
+            this.checkedListBox2.ForeColor = System.Drawing.Color.Black;
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
             "123456",
@@ -176,12 +180,12 @@
             "689899"});
             this.checkedListBox2.Location = new System.Drawing.Point(421, 348);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(143, 61);
+            this.checkedListBox2.Size = new System.Drawing.Size(143, 52);
             this.checkedListBox2.TabIndex = 17;
             // 
             // SingleRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(743, 442);
