@@ -38,9 +38,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(233, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 38);
@@ -51,9 +51,9 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackColor = System.Drawing.Color.DarkOrange;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(232, 310);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 37);
@@ -63,9 +63,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.BackColor = System.Drawing.Color.DarkOrange;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(235, 88);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 37);
@@ -75,9 +75,9 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.BackColor = System.Drawing.Color.DarkOrange;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(235, 163);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 37);
@@ -87,9 +87,9 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.BackColor = System.Drawing.Color.DarkOrange;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(233, 236);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(138, 41);
