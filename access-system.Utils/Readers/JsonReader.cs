@@ -6,7 +6,7 @@ namespace access_system.Utils.Readers
     /// <summary>
     /// Provides methods for working with Json files
     /// </summary>
-    class JsonReader : IReader
+    public class JsonReader : IReader
     {
         private static object lockObject = new object();
 
