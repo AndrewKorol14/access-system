@@ -11,6 +11,11 @@ namespace access_system.Utils.BuildingAndComponents
     {
         private List<UserTypes> typesUsersWithAccess;
 
+        public AccesMode()
+        {
+            typesUsersWithAccess = new List<UserTypes>();
+        }
+
         public void AddTypeOfUser(UserTypes type)
         {
             typesUsersWithAccess.Add(type);
@@ -18,11 +23,8 @@ namespace access_system.Utils.BuildingAndComponents
 
         public void DeletTepeOfUser(UserTypes type)
         {
-            if(typesUsersWithAccess.Contains(type))
-            {
-                //не помню точно как оно правильно рабботает ннадо чекнуть а ноут садиться 
-                typesUsersWithAccess.Remove(type);
-            }
+            //ремув вернёт fols если не найдёт элемента но это не особо важно наверно
+            typesUsersWithAccess.Remove(type);
         }
 
         public bool СheckTypeAvailability(UserTypes type)

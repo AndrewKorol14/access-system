@@ -1,8 +1,5 @@
-﻿using System;
+﻿using access_system.Utils.Enums;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace access_system.Utils
 {
@@ -11,26 +8,27 @@ namespace access_system.Utils
     /// </summary>
     public class User
     {
-        private string FirsName;
-        private string LastName;
-        private List<ElectronicPass> electronicPasses;
-        private readonly int uniqeID;
+        public string FirsName { get; private set; }
+        public string LastName { get; private set; }
+        public List<ElectronicPass> ElectronicPasses { get; private set; }
+        public int UniqeID { get; private set; }
+        public UserTypes UserType { get; private set; }
 
         public User(string FirsName, string LastName, List<ElectronicPass> electronicPasses, int uniqeID)
         {
-            this.electronicPasses = electronicPasses;
+            ElectronicPasses = electronicPasses;
             this.FirsName = FirsName;
             this.LastName = LastName;
-            this.uniqeID = uniqeID;
+            UniqeID = uniqeID;
         }
 
         public User(string FirsName, string LastName, ElectronicPass electronicPass, int uniqeID)
         {
             this.FirsName = FirsName;
             this.LastName = LastName;
-            this.uniqeID = uniqeID;
-            electronicPasses = new List<ElectronicPass>();
-            electronicPasses.Add(electronicPass);
+            UniqeID = uniqeID;
+            ElectronicPasses = new List<ElectronicPass>();
+            ElectronicPasses.Add(electronicPass);
         }
 
         /// <summary>
@@ -39,7 +37,7 @@ namespace access_system.Utils
         /// <param name="electronicPass"></param>
         public void AddPassForUser(ElectronicPass electronicPass)
         {
-            electronicPasses.Add(electronicPass);
+            ElectronicPasses.Add(electronicPass);
         }
     }
 }
