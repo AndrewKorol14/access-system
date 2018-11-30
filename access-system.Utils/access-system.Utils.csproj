@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildingAndComponents\AccesMode.cs" />
+    <Compile Include="BuildingAndComponents\Building.cs" />
     <Compile Include="BuildingAndComponents\Floor.cs" />
     <Compile Include="BuildingAndComponents\Lock.cs" />
     <Compile Include="BuildingAndComponents\LockCreator.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace access_system.Utils.Readers
 {
-    interface IReader
+    public interface IReader
     {
         void WriteToFile<T>(string directoryForSave, T objectToWriteToFile);
 

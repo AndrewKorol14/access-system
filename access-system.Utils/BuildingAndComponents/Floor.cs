@@ -3,17 +3,18 @@ using System.Collections.Generic;
 
 namespace access_system.Utils.BuildingAndComponents
 {
-    class Floor
+    internal class Floor
     {
         private List<Room> rooms;
         private int floorNumber;
         private int roomNumber;
 
-        public Floor(int floorNumber, int roomNumber)
+        public Floor(int floorNumber, int roomsNumber)
         {
-            this.roomNumber = roomNumber; 
+            this.roomNumber = roomsNumber; 
             this.floorNumber = floorNumber;
-            for(int i = 1; i <= roomNumber; i++)
+            rooms = new List<Room>();
+            for(int i = 1; i <= roomsNumber; i++)
             {
                 rooms.Add(new Room(i, floorNumber, null, RoomTypes.RoomTypeIsNotDefined));
             }
