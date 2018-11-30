@@ -1,13 +1,10 @@
 ﻿using access_system.Utils.Enums;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace access_system.Utils.BuildingAndComponents
 {
-    class SecurityPost
+    public class SecurityPost
     {
         List<User> users;
         List<ElectronicPass> electronicPasses;
@@ -62,9 +59,34 @@ namespace access_system.Utils.BuildingAndComponents
                 if(nextUser.UniqeID == userId)
                 {
                     nextUser.AddPassForUser(electronicPasses.Where(next => next.CardNumber == passNumber).Single());
+                    break;
                 }
             }
             return true;
+        }
+
+        public void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus)
+        {
+            foreach (ElectronicPass nextPass in electronicPasses)
+            {
+                if (nextPass.CardNumber == passNumber)
+                {
+                    nextPass.СhangeСardStatus(newStatus);
+                    break;
+                }
+            }
+        }
+
+        public User GetUser(int UserId)
+        {
+            foreach (User nextUser in users)
+            {
+                if (nextUser.UniqeID == UserId)
+                {
+                    return nextUser;
+                }
+            }
+            throw new System.ArgumentException("User with this ID not found");
         }
     }
 }

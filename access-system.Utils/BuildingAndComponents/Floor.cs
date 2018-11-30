@@ -35,5 +35,10 @@ namespace access_system.Utils.BuildingAndComponents
         {
             rooms[roomNumber - 1].AddAccesModifierForRoom(type);
         }
+
+        public LogsEntry EmulateEntranceToRoom(User user, int roomNumber)
+        {
+            return rooms[roomNumber].LoginAttempt(user);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace access_system.Utils.BuildingAndComponents
         private int floorNumber;
         private int roomsNumber;
         private VisitingLogs visitingLogs;
-        //добавить пост охраны
+        private SecurityPost securityPost;
 
         public Building(int floorNumber, int roomsNumber, string name)
         {
@@ -20,6 +20,8 @@ namespace access_system.Utils.BuildingAndComponents
                 throw new System.ArgumentException("Invalid number of floors or rooms");
             }
             this.name = name;
+            securityPost = new SecurityPost();
+            visitingLogs = new VisitingLogs();
             this.roomsNumber = roomsNumber;
             this.floorNumber = floorNumber;
             floors = new List<Floor>();
@@ -52,6 +54,18 @@ namespace access_system.Utils.BuildingAndComponents
         public void WriteLogsToFile(IReader reader, string pathForFile)
         {
             visitingLogs.WriteLogsToFile(reader, pathForFile);
+        }
+
+        public string EmulateEntrance(int userId, int floorNumber, int roomNumber)
+        {
+            if (floorNumber <= this.floorNumber && roomNumber <= roomsNumber && floorNumber >= 0 && roomsNumber >= 0)
+            {
+                LogsEntry entry;
+                entry = floors[floorNumber].EmulateEntranceToRoom(securityPost.GetUser(userId), roomNumber);
+                visitingLogs.AddLogsEntry(entry);
+                return entry.ToString();              
+            }
+            throw new System.ArgumentException("Unable to simulate input with given parameters");
         }
     }
 }
