@@ -32,11 +32,24 @@ namespace access_system.Utils.BuildingAndComponents
 
         public bool CheckUserAccess(User user)
         {
-            if(categoriesWithAccess.СheckTypeAvailability(user.UserType))
+            bool allPassblock = true;
+
+            foreach(ElectronicPass nextPass in user.ElectronicPasses)
+            {
+                if(nextPass.BlockingStatus == PassBlocking.Unlocked)
+                {
+                    allPassblock = false;
+                    break;
+                }
+            }
+            if (allPassblock)
+            {
+                return false;
+            }
+            if (categoriesWithAccess.СheckTypeAvailability(user.UserType))
             {
                 return true;
             }
-
             if(usersWhithUniqueAccess.Contains(user.UniqeID))
             {
                 return true;

@@ -32,6 +32,14 @@ namespace access_system.Utils
             ElectronicPasses.Add(electronicPass);
         }
 
+        public User(string FirsName, string LastName, int uniqeID)
+        {
+            this.FirsName = FirsName;
+            this.LastName = LastName;
+            UniqeID = uniqeID;
+            ElectronicPasses = new List<ElectronicPass>();
+        }
+
         /// <summary>
         /// Add user additional card
         /// </summary>

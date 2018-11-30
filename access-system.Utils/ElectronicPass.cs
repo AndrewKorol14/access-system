@@ -12,13 +12,13 @@ namespace access_system.Utils
     /// </summary>
     public class ElectronicPass
     {
-        private PassBlocking blockingStatus;
-        private readonly int cardNumber;
+        public PassBlocking BlockingStatus { get; private set; }
+        public int CardNumber { get; private set; }
 
         public ElectronicPass(PassBlocking blockingStatus, int cardNumber)
         {
-            this.blockingStatus = blockingStatus;
-            this.cardNumber = cardNumber;
+            BlockingStatus = blockingStatus;
+            CardNumber = cardNumber;
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace access_system.Utils
         /// <param name="newStatus"></param>
         public void СhangeСardStatus(PassBlocking newStatus)
         {
-            blockingStatus = newStatus;
+            BlockingStatus = newStatus;
         }
     }
 }
