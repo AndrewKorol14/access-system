@@ -15,6 +15,10 @@ namespace access_system.Utils.BuildingAndComponents
 
         public Building(int floorNumber, int roomsNumber, string name)
         {
+            if(floorNumber < 1 || roomsNumber <=0 || floorNumber > 15 || roomsNumber > 15)
+            {
+                throw new System.ArgumentException("Invalid number of floors or rooms");
+            }
             this.name = name;
             this.roomsNumber = roomsNumber;
             this.floorNumber = floorNumber;
