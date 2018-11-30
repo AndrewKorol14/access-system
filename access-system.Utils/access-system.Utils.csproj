@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\access-system\packages\Newtonsoft.Json.12.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\access-system\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -46,8 +46,6 @@
   <ItemGroup>
     <Compile Include="BuildingAndComponents\AccesMode.cs" />
     <Compile Include="BuildingAndComponents\Lock.cs" />
-    <Compile Include="BuildingAndComponents\LockCreator.cs" />
-    <Compile Include="BuildingAndComponents\LogsEntry.cs" />
     <Compile Include="BuildingAndComponents\Room.cs" />
     <Compile Include="ElectronicPass.cs" />
     <Compile Include="Enums\PassBlocking.cs" />
@@ -61,7 +59,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

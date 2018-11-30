@@ -12,34 +12,41 @@ namespace access_system
 {
     public partial class NewBuildingCreationForm : Form
     {
+        private bool isFloorNumberBoxFill = false;
+        private bool isRoomNumberBoxFill = false;
+
         public NewBuildingCreationForm()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void floorNumberTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            if(floorNumberTextBox.Text.Length == 0)
+            {
+                createButton.Enabled = false;
+            }
+            else
+            {
+                createButton.Enabled = true;
+            }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void roomNumberTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            if (roomNumberTextBox.Text.Length == 0)
+            {
+                createButton.Enabled = false;
+            }
+            else
+            {
+                createButton.Enabled = true;
+            }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void createButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }
