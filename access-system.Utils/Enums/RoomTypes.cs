@@ -10,6 +10,7 @@
         LectureRoom,
         GeneralPurpose,
         Laboratory,
-        StaffOnly
+        StaffOnly,
+        RoomTypeIsNotDefined
     }
 }

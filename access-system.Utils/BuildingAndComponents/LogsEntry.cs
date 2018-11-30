@@ -15,7 +15,7 @@ namespace access_system.Utils.BuildingAndComponents
             this.user = user;
             this.room = room;
             this.loginAttemptTime = loginAttemptTime;
-            this.LoginResult = loginResult;
+            LoginResult = loginResult;
         }
 
         public override string ToString()
@@ -23,7 +23,7 @@ namespace access_system.Utils.BuildingAndComponents
             StringBuilder entryRecord = new StringBuilder();
             entryRecord.Append("User: ");
             entryRecord.Append(user.ToString());
-            entryRecord.Append(" Attempted to enter the room :" + room.RoomName + " floor:"+ room.FloorNumber + " roomNumber:" + room.RoomName);
+            entryRecord.Append(" Attempted to enter" + room.ToString());
             entryRecord.Append("At:" + loginAttemptTime.ToString());
             if(LoginResult)
             {

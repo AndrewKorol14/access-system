@@ -45,7 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildingAndComponents\AccesMode.cs" />
+    <Compile Include="BuildingAndComponents\Floor.cs" />
     <Compile Include="BuildingAndComponents\Lock.cs" />
+    <Compile Include="BuildingAndComponents\LockCreator.cs" />
+    <Compile Include="BuildingAndComponents\LogsEntry.cs" />
     <Compile Include="BuildingAndComponents\Room.cs" />
     <Compile Include="BuildingAndComponents\VisitingLogs.cs" />
     <Compile Include="ElectronicPass.cs" />

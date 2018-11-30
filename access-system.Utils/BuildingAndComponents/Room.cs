@@ -12,7 +12,7 @@ namespace access_system.Utils.BuildingAndComponents
         public int RoomNumber { get; private set; }
         public int FloorNumber { get; private set; }
         public string RoomName { get; set; }
-        public RoomTypes RoomType { get; private set; }
+        public RoomTypes RoomType { get; set; }
         private Lock roomLock;
 
         public Room(int roomNumber, int floorNumber, string roomName, RoomTypes roomType)
@@ -27,6 +27,23 @@ namespace access_system.Utils.BuildingAndComponents
         public LogsEntry LoginAttempt(User user)
         {
             return new LogsEntry(user, this, roomLock.CheckUserAccess(user), DateTime.Now);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder roomInfo = new StringBuilder();
+            roomInfo.Append("room: " +RoomName + " floor:" + FloorNumber + " roomNumber:" + RoomName);
+            return roomInfo.ToString();
+        }
+
+        public void AddAccesModifierForRoom(UserTypes type)
+        {
+            roomLock.AddAccesModifier(type);
+        }
+
+        public void AddUserWithUniqAccessForRoom(User user)
+        {
+            roomLock.AddUserWithUniqAccess(user);
         }
     }
 }
