@@ -7,7 +7,7 @@ namespace access_system.Utils.BuildingAndComponents
     {
         private User user;
         private Room room;
-        private bool loginResult;
+        public bool LoginResult { get; private set; }
         private DateTime loginAttemptTime;
 
         public LogsEntry(User user, Room room, bool loginResult, DateTime loginAttemptTime)
@@ -15,7 +15,7 @@ namespace access_system.Utils.BuildingAndComponents
             this.user = user;
             this.room = room;
             this.loginAttemptTime = loginAttemptTime;
-            this.loginResult = loginResult;
+            this.LoginResult = loginResult;
         }
 
         public override string ToString()
@@ -25,7 +25,7 @@ namespace access_system.Utils.BuildingAndComponents
             entryRecord.Append(user.ToString());
             entryRecord.Append(" Attempted to enter the room :" + room.RoomName + " floor:"+ room.FloorNumber + " roomNumber:" + room.RoomName);
             entryRecord.Append("At:" + loginAttemptTime.ToString());
-            if(loginResult)
+            if(LoginResult)
             {
                 entryRecord.Append(" User was allowed access");
             }
