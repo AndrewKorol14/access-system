@@ -15,16 +15,19 @@ namespace access_system
     {
         private int floorsNumber;
         private int roomsNumber;
+
         private readonly int buttonWidth = 364;
         private readonly int buttonHeight = 30;
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
-        private readonly int scrollWidth = 20;
 
-        public Building(int floorsNumber, int roomsNumber)
+        private access_system.Utils.BuildingAndComponents.Building buildingModel;
+
+        public Building(int floorsNumber, int roomsNumber, access_system.Utils.BuildingAndComponents.Building buildingModel)
         {
             this.floorsNumber = floorsNumber;
             this.roomsNumber = roomsNumber;
+            this.buildingModel = buildingModel;
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);            
@@ -50,10 +53,19 @@ namespace access_system
                 button.BackColor = Color.DarkOrange;
                 button.Text = "Floor " + i;
                 button.Name = "floor" + i + "Button";
+                button.Click += floorButton_Click;
                 panel.Controls.Add(button);
                 top += button.Height + 7;
             }
             panel.AutoScroll = true;
+        }
+
+        private void floorButton_Click(object sender, EventArgs e)
+        {
+            if(sender is Button button2)
+            {
+                
+            }
         }
     }
 }

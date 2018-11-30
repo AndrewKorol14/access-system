@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewBuildingCreationForm));
             this.floorNumberTextBox = new System.Windows.Forms.TextBox();
-            this.enterDataMessageLabel = new System.Windows.Forms.Label();
             this.floorNumberLabel = new System.Windows.Forms.Label();
             this.roomNumberLabel = new System.Windows.Forms.Label();
             this.roomNumberTextBox = new System.Windows.Forms.TextBox();
             this.createButton = new System.Windows.Forms.Button();
+            this.enterDataMessageLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // floorNumberTextBox
@@ -44,19 +44,7 @@
             this.floorNumberTextBox.Name = "floorNumberTextBox";
             this.floorNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.floorNumberTextBox.TabIndex = 0;
-            this.floorNumberTextBox.TextChanged += new System.EventHandler(this.floorNumberTextBox_TextChanged);
-            // 
-            // enterDataMessageLabel
-            // 
-            this.enterDataMessageLabel.AutoSize = true;
-            this.enterDataMessageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.enterDataMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.enterDataMessageLabel.ForeColor = System.Drawing.Color.Black;
-            this.enterDataMessageLabel.Location = new System.Drawing.Point(57, 42);
-            this.enterDataMessageLabel.Name = "enterDataMessageLabel";
-            this.enterDataMessageLabel.Size = new System.Drawing.Size(384, 18);
-            this.enterDataMessageLabel.TabIndex = 1;
-            this.enterDataMessageLabel.Text = "Enter the number of floors and rooms on the floor";
+            this.floorNumberTextBox.TextChanged += new System.EventHandler(this.floorAndRoomNumberTextBox_TextChanged);
             // 
             // floorNumberLabel
             // 
@@ -89,7 +77,7 @@
             this.roomNumberTextBox.Name = "roomNumberTextBox";
             this.roomNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.roomNumberTextBox.TabIndex = 4;
-            this.roomNumberTextBox.TextChanged += new System.EventHandler(this.roomNumberTextBox_TextChanged);
+            this.roomNumberTextBox.TextChanged += new System.EventHandler(this.floorAndRoomNumberTextBox_TextChanged);
             // 
             // createButton
             // 
@@ -102,8 +90,21 @@
             this.createButton.TabIndex = 5;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = false;
+            this.createButton.EnabledChanged += new System.EventHandler(this.createButton_EnabledChanged);
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             this.createButton.Enter += new System.EventHandler(this.createButton_Click);
+            // 
+            // enterDataMessageLabel
+            // 
+            this.enterDataMessageLabel.AutoSize = true;
+            this.enterDataMessageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.enterDataMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.enterDataMessageLabel.ForeColor = System.Drawing.Color.Black;
+            this.enterDataMessageLabel.Location = new System.Drawing.Point(152, 24);
+            this.enterDataMessageLabel.Name = "enterDataMessageLabel";
+            this.enterDataMessageLabel.Size = new System.Drawing.Size(406, 20);
+            this.enterDataMessageLabel.TabIndex = 1;
+            this.enterDataMessageLabel.Text = "Enter the number of floors and rooms on the floor";
             // 
             // NewBuildingCreationForm
             // 
@@ -119,6 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewBuildingCreationForm";
             this.Text = "Create new bulding";
+            this.Load += new System.EventHandler(this.NewBuildingCreationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,10 +129,10 @@
         #endregion
         
         private System.Windows.Forms.TextBox floorNumberTextBox;
-        private System.Windows.Forms.Label enterDataMessageLabel;
         private System.Windows.Forms.Label floorNumberLabel;
         private System.Windows.Forms.Label roomNumberLabel;
         private System.Windows.Forms.TextBox roomNumberTextBox;
         private System.Windows.Forms.Button createButton;
+        private System.Windows.Forms.Label enterDataMessageLabel;
     }
 }

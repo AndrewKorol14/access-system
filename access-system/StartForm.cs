@@ -12,9 +12,15 @@ namespace access_system
 {
     public partial class StartForm : Form
     {
+        private readonly int windowHeight = 460;
+        private readonly int windowWidth = 710;
+
         public StartForm()
         {
             InitializeComponent();
+            this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            this.MaximizeBox = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +36,7 @@ namespace access_system
         {
             NewBuildingCreationForm newBuildingCreationForm = new NewBuildingCreationForm();
             newBuildingCreationForm.Show();
+            Hide();
         }
 
         private void StartForm_Load(object sender, EventArgs e)
