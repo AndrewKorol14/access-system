@@ -9,18 +9,18 @@ namespace access_system.Utils.BuildingAndComponents
 {
     class Room
     {
-        private int roomNumber;
-        private int floorNumber;
-        private string roomName;
-        private RoomTypes roomType;
+        public int RoomNumber { get; private set; }
+        public int FloorNumber { get; private set; }
+        public string RoomName { get; private set; }
+        public RoomTypes RoomType { get; private set; }
         private Lock roomLock;
 
         public Room(int roomNumber, int floorNumber, string roomName, RoomTypes roomType)
         {
-            this.floorNumber = floorNumber;
-            this.roomNumber = roomNumber;
-            this.roomName = roomName;
-            this.roomType = roomType;
+            FloorNumber = floorNumber;
+            RoomNumber = roomNumber;
+            RoomName = roomName;
+            RoomType = roomType;
             roomLock = LockCreator.CreateLockForspecificRoomType(roomType);
         }
     }

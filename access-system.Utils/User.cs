@@ -1,5 +1,6 @@
 ﻿using access_system.Utils.Enums;
 using System.Collections.Generic;
+using System.Text;
 
 namespace access_system.Utils
 {
@@ -38,6 +39,15 @@ namespace access_system.Utils
         public void AddPassForUser(ElectronicPass electronicPass)
         {
             ElectronicPasses.Add(electronicPass);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder userInfo = new StringBuilder();
+            userInfo.Append("FirstName:" + FirsName);
+            userInfo.Append("LastName" + LastName);
+            userInfo.Append("UserType:" + UserType);
+            return userInfo.ToString();
         }
     }
 }
