@@ -46,7 +46,9 @@ namespace access_system
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            
+            Building building = new Building(15, 3);
+            building.Show();
+            Hide();
         }
     }
 }
