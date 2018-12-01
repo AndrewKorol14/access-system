@@ -19,7 +19,6 @@ namespace access_system.Utils.BuildingAndComponents
             {
                 throw new System.ArgumentException("Invalid number of floors or rooms");
             }
-            this.name = name;
             securityPost = new SecurityPost();
             visitingLogs = new VisitingLogs();
             this.roomsNumber = roomsNumber;

@@ -41,18 +41,33 @@ namespace access_system
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
+            try
             {
-                floorNumber = Int32.Parse(floorNumberTextBox.Text);
-                roomNumber = Int32.Parse(roomNumberTextBox.Text);
-                Building building = new Building(floorNumber, roomNumber, new Utils.BuildingAndComponents.Building(10, 3));
-                building.Show();
-                Hide();
+                if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
+                {
+                    floorNumber = Int32.Parse(floorNumberTextBox.Text);
+                    roomNumber = Int32.Parse(roomNumberTextBox.Text);
+                    Building building = new Building(floorNumber, roomNumber, new Utils.BuildingAndComponents.Building(floorNumber, roomNumber));
+                    building.Show();
+                    Hide();
+                }
+                else
+                {
+                    string messageTitle = "Input error";
+                    string message = "You enter invalid parameters. Please, input correct values";
+                    MessageBoxButtons messageBoxButtons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, messageTitle, messageBoxButtons, MessageBoxIcon.Error);
+                    if (result == DialogResult.OK)
+                    {
+                        floorNumberTextBox.Clear();
+                        roomNumberTextBox.Clear();
+                    }
+                }
             }
-            else
+            catch(ArgumentException ex)
             {
-                string messageTitle = "Input error";
-                string message = "You enter invalid parameters. Please, input correct values";
+                string messageTitle = "Invalid number of floors or rooms";
+                string message = "You enter invalid number of floors or rooms. Please, input correct values";
                 MessageBoxButtons messageBoxButtons = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(message, messageTitle, messageBoxButtons, MessageBoxIcon.Error);
                 if (result == DialogResult.OK)

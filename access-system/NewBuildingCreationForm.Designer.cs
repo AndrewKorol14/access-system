@@ -50,11 +50,11 @@
             // 
             this.floorNumberLabel.AutoSize = true;
             this.floorNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.floorNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.floorNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.floorNumberLabel.ForeColor = System.Drawing.Color.Black;
             this.floorNumberLabel.Location = new System.Drawing.Point(161, 132);
             this.floorNumberLabel.Name = "floorNumberLabel";
-            this.floorNumberLabel.Size = new System.Drawing.Size(101, 15);
+            this.floorNumberLabel.Size = new System.Drawing.Size(118, 15);
             this.floorNumberLabel.TabIndex = 2;
             this.floorNumberLabel.Text = "Number of floors:";
             // 
@@ -62,11 +62,11 @@
             // 
             this.roomNumberLabel.AutoSize = true;
             this.roomNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.roomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.roomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.roomNumberLabel.ForeColor = System.Drawing.Color.Black;
             this.roomNumberLabel.Location = new System.Drawing.Point(118, 220);
             this.roomNumberLabel.Name = "roomNumberLabel";
-            this.roomNumberLabel.Size = new System.Drawing.Size(170, 15);
+            this.roomNumberLabel.Size = new System.Drawing.Size(199, 15);
             this.roomNumberLabel.TabIndex = 3;
             this.roomNumberLabel.Text = "Number of rooms on the floor:";
             // 

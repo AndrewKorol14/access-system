@@ -55,7 +55,7 @@ namespace access_system
                 button.Name = "floor" + i + "Button";
                 button.Click += floorButton_Click;
                 panel.Controls.Add(button);
-                top += button.Height + 7;
+                top += button.Height + 7; 
             }
             panel.AutoScroll = true;
         }
@@ -65,7 +65,7 @@ namespace access_system
             var button = (Button)sender;
             if(button != null)
             {
-                RoomForm roomForm = new RoomForm(roomsNumber);
+                RoomForm roomForm = new RoomForm(roomsNumber, button.Text);
                 roomForm.Show();
                 Hide();
             }
