@@ -61,6 +61,7 @@
     <Compile Include="Readers\IReader.cs" />
     <Compile Include="Readers\JsonReader.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

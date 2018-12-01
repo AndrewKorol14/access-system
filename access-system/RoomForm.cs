@@ -12,8 +12,11 @@ namespace access_system
 {
     public partial class RoomForm : Form
     {
-        public RoomForm()
+        private int roomNumber;
+
+        public RoomForm(int roomNumber)
         {
+            this.roomNumber = roomNumber;
             InitializeComponent();
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using access_system.Utils;
 
 namespace access_system
 {
@@ -30,7 +31,7 @@ namespace access_system
         {
             if(floorNumberTextBox.Text.Length != 0 && roomNumberTextBox.Text.Length != 0)
             {
-                createButton.Enabled = true;
+                createButton.Enabled = true;                
             }
             else
             {
@@ -40,9 +41,26 @@ namespace access_system
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            Building building = new Building(10, 3, new Utils.BuildingAndComponents.Building(10, 3));
-            building.Show();
-            Hide();
+            if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
+            {
+                floorNumber = Int32.Parse(floorNumberTextBox.Text);
+                roomNumber = Int32.Parse(roomNumberTextBox.Text);
+                Building building = new Building(floorNumber, roomNumber, new Utils.BuildingAndComponents.Building(10, 3));
+                building.Show();
+                Hide();
+            }
+            else
+            {
+                string messageTitle = "Input error";
+                string message = "You enter invalid parameters. Please, input correct values";
+                MessageBoxButtons messageBoxButtons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, messageTitle, messageBoxButtons, MessageBoxIcon.Error);
+                if (result == DialogResult.OK)
+                {
+                    floorNumberTextBox.Clear();
+                    roomNumberTextBox.Clear();
+                }
+            }
         }
 
         private void NewBuildingCreationForm_Load(object sender, EventArgs e)

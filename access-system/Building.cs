@@ -62,9 +62,12 @@ namespace access_system
 
         private void floorButton_Click(object sender, EventArgs e)
         {
-            if(sender is Button button2)
+            var button = (Button)sender;
+            if(button != null)
             {
-                
+                RoomForm roomForm = new RoomForm(roomsNumber);
+                roomForm.Show();
+                Hide();
             }
         }
     }

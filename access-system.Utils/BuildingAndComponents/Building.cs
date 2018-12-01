@@ -13,7 +13,7 @@ namespace access_system.Utils.BuildingAndComponents
         private VisitingLogs visitingLogs;
         private SecurityPost securityPost;
 
-        public Building(int floorNumber, int roomsNumber, string name)
+        public Building(int floorNumber, int roomsNumber)
         {
             if(floorNumber < 1 || roomsNumber <=0 || floorNumber > 15 || roomsNumber > 15)
             {
