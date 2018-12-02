@@ -59,7 +59,7 @@ namespace access_system
             }
             panel.AutoScroll = true;
         }
-
+        //SetError on controller for errors
         private void floorButton_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;

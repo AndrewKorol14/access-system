@@ -19,10 +19,13 @@ namespace access_system
         private readonly int windowWidth = 710;
         private readonly int roomButtonHeight = 30;
         private readonly int roomButtonWidth = 200;
+        private readonly int backButtonWidth = 100;
 
         private Panel panel;
 
         private Label floorNumberLabel;
+
+        private Button backButton;
 
         public RoomForm(int roomNumber, string floor)
         {
@@ -73,9 +76,17 @@ namespace access_system
                     button.Left = secondLeft;
                     panel.Controls.Add(button);
                     top += button.Height + 7;
-                }
-                
+                }                
             }
+
+            backButton = new Button();
+            backButton.Width = backButtonWidth;
+            backButton.Height = roomButtonHeight;
+            backButton.BackColor = Color.Salmon;
+            backButton.Text = "Back";
+
+
+
 
 
             this.Controls.Add(panel);
