@@ -46,7 +46,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IStartFormView.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
+      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
+      <Name>access-system.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.IServices\access-system.IServices.csproj">
+      <Project>{7EB4261C-7F00-4F39-AA84-B6C7E9C00DBC}</Project>
+      <Name>access-system.IServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
