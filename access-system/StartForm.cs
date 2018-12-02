@@ -1,4 +1,5 @@
-﻿using System;
+﻿using access_system.Presenters.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace access_system
 {
-    public partial class StartForm : Form
+    public partial class StartForm : Form, IStartFormView
     {
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
