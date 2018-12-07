@@ -153,6 +153,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
+      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
+      <Name>access-system.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\access-system.Presenters\access-system.Presenters.csproj">
       <Project>{648db0f2-25ee-409b-aa0d-7502f21f66cf}</Project>
       <Name>access-system.Presenters</Name>

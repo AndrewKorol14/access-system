@@ -1,4 +1,5 @@
-﻿using access_system.Presenters.Views;
+﻿using access_system.Entities.UI;
+using access_system.Presenters.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace access_system
 {
-    public partial class StartForm : Form, IStartFormView
+    public partial class StartForm : Form//, IStartFormView
     {
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
@@ -23,6 +24,9 @@ namespace access_system
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximizeBox = false;
         }
+
+        
+        
 
         private void button2_Click(object sender, EventArgs e)
         {

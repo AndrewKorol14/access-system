@@ -9,6 +9,6 @@ namespace IRepositories
 {
     public interface IStartRepository
     {
-        StartFormEntity GetData()
+        StartFormEntity GetData();
     }
 }

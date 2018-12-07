@@ -43,6 +43,12 @@
     <Compile Include="IStartRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
+      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
+      <Name>access-system.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
