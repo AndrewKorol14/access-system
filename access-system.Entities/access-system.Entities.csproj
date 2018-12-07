@@ -51,6 +51,12 @@
     <Compile Include="UI\StartFormEntity.cs" />
     <Compile Include="VisitingLogEntity.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\access-system.Enums\access-system.Enums.csproj">
+      <Project>{b5eec886-288a-412d-a5b7-89644f01f57e}</Project>
+      <Name>access-system.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

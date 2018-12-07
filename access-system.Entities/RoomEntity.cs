@@ -16,7 +16,7 @@ namespace access_system.Entities
             RoomNumber = roomNumber;
             RoomName = roomName;
             RoomType = roomType;
-            RoomLock = LockCreator.CreateLockForspecificRoomType(roomType);
+            //RoomLock = LockCreator.CreateLockForspecificRoomType(roomType);
         }
     }
 }
