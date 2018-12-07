@@ -17,9 +17,22 @@ namespace access_system
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createCardButton_Click(object sender, EventArgs e)
         {
+            CardCreationForm cardCreationForm = new CardCreationForm();
+            cardCreationForm.Show();
+        }
 
+        private void lockCardButton_Click(object sender, EventArgs e)
+        {
+            LockingCardForm lockingCardForm = new LockingCardForm();
+            lockingCardForm.Show();
+        }
+
+        private void emulateEntranceButton_Click(object sender, EventArgs e)
+        {
+            EmulateEntranceForm emulateEntranceForm = new EmulateEntranceForm();
+            emulateEntranceForm.Show();
         }
     }
 }
