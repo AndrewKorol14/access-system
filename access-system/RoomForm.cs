@@ -24,10 +24,15 @@ namespace access_system
 
         private Label floorNumberLabel;
 
-        public RoomForm(int roomNumber, string floor)
+        private Button backButton;
+
+        private Building BuildingForm { get; set; }
+
+        public RoomForm(int roomNumber, string floor, Building buildingForm)
         {
             this.roomNumber = roomNumber;
             this.floor = floor;
+            BuildingForm = buildingForm;
 
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
@@ -74,16 +79,29 @@ namespace access_system
                     panel.Controls.Add(button);
                     top += button.Height + 7;
                 }
-                
+                if (i == roomNumber - 1)
+                {
+                    top += 60;
+                    backButton = new Button();
+                    backButton.Width = roomButtonWidth;
+                    backButton.Height = roomButtonHeight;
+                    backButton.Top = top;
+                    backButton.Left = secondLeft;
+                    backButton.BackColor = Color.Salmon;
+                    backButton.Text = "Back";
+                    backButton.Name = "backButton";
+                    backButton.Click += backButton_Click;
+                    panel.Controls.Add(backButton);
+                }                
             }
-
-
             this.Controls.Add(panel);
-            panel.Controls.Add(floorNumberLabel);
-            
+            panel.Controls.Add(floorNumberLabel);                    
+        }
 
-
-
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            BuildingForm.Show();
+            Hide();
         }
 
         private void roomButton_Click(object sender, EventArgs e)

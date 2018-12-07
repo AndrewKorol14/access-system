@@ -65,7 +65,7 @@ namespace access_system
             var button = (Button)sender;
             if(button != null)
             {
-                RoomForm roomForm = new RoomForm(roomsNumber, button.Text);
+                RoomForm roomForm = new RoomForm(roomsNumber, button.Text, this);
                 roomForm.Show();
                 Hide();
             }
