@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingleRoom));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.floorNumberLabel = new System.Windows.Forms.Label();
+            this.roomNumberLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.roomNameLabel = new System.Windows.Forms.Label();
+            this.accessModeLabel = new System.Windows.Forms.Label();
+            this.roomTypeLabel = new System.Windows.Forms.Label();
+            this.specialIdLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // label1
+            // floorNumberLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(277, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Floor number:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.floorNumberLabel.AutoSize = true;
+            this.floorNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.floorNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.floorNumberLabel.ForeColor = System.Drawing.Color.Black;
+            this.floorNumberLabel.Location = new System.Drawing.Point(201, 30);
+            this.floorNumberLabel.Name = "floorNumberLabel";
+            this.floorNumberLabel.Size = new System.Drawing.Size(84, 15);
+            this.floorNumberLabel.TabIndex = 0;
+            this.floorNumberLabel.Text = "Floor number:";
+            this.floorNumberLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // roomNumberLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(277, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Room number:";
+            this.roomNumberLabel.AutoSize = true;
+            this.roomNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.roomNumberLabel.ForeColor = System.Drawing.Color.Black;
+            this.roomNumberLabel.Location = new System.Drawing.Point(201, 70);
+            this.roomNumberLabel.Name = "roomNumberLabel";
+            this.roomNumberLabel.Size = new System.Drawing.Size(90, 15);
+            this.roomNumberLabel.TabIndex = 1;
+            this.roomNumberLabel.Text = "Room number:";
             // 
             // label3
             // 
@@ -90,50 +90,50 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "__";
             // 
-            // label5
+            // roomNameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(277, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Room name:";
+            this.roomNameLabel.AutoSize = true;
+            this.roomNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roomNameLabel.ForeColor = System.Drawing.Color.Black;
+            this.roomNameLabel.Location = new System.Drawing.Point(201, 144);
+            this.roomNameLabel.Name = "roomNameLabel";
+            this.roomNameLabel.Size = new System.Drawing.Size(79, 15);
+            this.roomNameLabel.TabIndex = 4;
+            this.roomNameLabel.Text = "Room name:";
             // 
-            // label6
+            // accessModeLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(277, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 15);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Access mode:";
+            this.accessModeLabel.AutoSize = true;
+            this.accessModeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.accessModeLabel.ForeColor = System.Drawing.Color.Black;
+            this.accessModeLabel.Location = new System.Drawing.Point(201, 269);
+            this.accessModeLabel.Name = "accessModeLabel";
+            this.accessModeLabel.Size = new System.Drawing.Size(83, 15);
+            this.accessModeLabel.TabIndex = 6;
+            this.accessModeLabel.Text = "Access mode:";
             // 
-            // label7
+            // roomTypeLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(285, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 15);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Room type:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.roomTypeLabel.AutoSize = true;
+            this.roomTypeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roomTypeLabel.ForeColor = System.Drawing.Color.Black;
+            this.roomTypeLabel.Location = new System.Drawing.Point(201, 194);
+            this.roomTypeLabel.Name = "roomTypeLabel";
+            this.roomTypeLabel.Size = new System.Drawing.Size(69, 15);
+            this.roomTypeLabel.TabIndex = 8;
+            this.roomTypeLabel.Text = "Room type:";
+            this.roomTypeLabel.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
+            // specialIdLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(285, 357);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 15);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Special ID:";
+            this.specialIdLabel.AutoSize = true;
+            this.specialIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.specialIdLabel.ForeColor = System.Drawing.Color.Black;
+            this.specialIdLabel.Location = new System.Drawing.Point(201, 362);
+            this.specialIdLabel.Name = "specialIdLabel";
+            this.specialIdLabel.Size = new System.Drawing.Size(66, 15);
+            this.specialIdLabel.TabIndex = 12;
+            this.specialIdLabel.Text = "Special ID:";
             // 
             // comboBox1
             // 
@@ -188,23 +188,24 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(743, 419);
+            this.ClientSize = new System.Drawing.Size(694, 421);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.specialIdLabel);
+            this.Controls.Add(this.roomTypeLabel);
+            this.Controls.Add(this.accessModeLabel);
+            this.Controls.Add(this.roomNameLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.roomNumberLabel);
+            this.Controls.Add(this.floorNumberLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SingleRoom";
             this.Text = "Room #";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SingleRoom_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,14 +213,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label floorNumberLabel;
+        private System.Windows.Forms.Label roomNumberLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label roomNameLabel;
+        private System.Windows.Forms.Label accessModeLabel;
+        private System.Windows.Forms.Label roomTypeLabel;
+        private System.Windows.Forms.Label specialIdLabel;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;

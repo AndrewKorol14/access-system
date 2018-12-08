@@ -58,5 +58,10 @@ namespace access_system
 
             }
         }
+
+        private void StartForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
     }
 }

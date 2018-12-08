@@ -87,5 +87,10 @@ namespace access_system
         {
 
         }
+
+        private void NewBuildingCreationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
     }
 }

@@ -70,5 +70,10 @@ namespace access_system
                 Hide();
             }
         }
+
+        private void Building_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
     }
 }

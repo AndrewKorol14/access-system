@@ -28,6 +28,8 @@ namespace access_system
 
         private Building BuildingForm { get; set; }
 
+        private SingleRoom singleRoomForm;
+
         public RoomForm(int roomNumber, string floor, Building buildingForm)
         {
             this.roomNumber = roomNumber;
@@ -106,7 +108,13 @@ namespace access_system
 
         private void roomButton_Click(object sender, EventArgs e)
         {
-
+            var button = (Button)sender;
+            if (button != null)
+            {
+                SingleRoom singleRoom = new SingleRoom(this, button.Text);
+                singleRoom.Show();
+                Hide();
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -124,6 +132,11 @@ namespace access_system
             //this.Controls.Add(panel);
             //panel.Controls.Add(floorNumberLabel);
             // Controls.Add(floorNumberLabel);
+        }
+
+        private void RoomForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
         }
     }
 }

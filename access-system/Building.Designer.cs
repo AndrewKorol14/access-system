@@ -41,6 +41,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Building";
             this.Text = "Building";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Building_FormClosing);
             this.Load += new System.EventHandler(this.Building_Load);
             this.ResumeLayout(false);
 

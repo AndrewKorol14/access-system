@@ -12,9 +12,23 @@ namespace access_system
 {
     public partial class SingleRoom : Form
     {
-        public SingleRoom()
+        private readonly int windowHeight = 460;
+        private readonly int windowWidth = 710;
+
+        private int _left = 540;
+        private int _top = 5 + 5;
+        _top = floorNumberLabel.Location.Y;
+
+        public SingleRoom(RoomForm roomForm, string roomName)
         {
             InitializeComponent();
+            Text = roomName;
+
+            this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            this.MaximizeBox = false;
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +44,11 @@ namespace access_system
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SingleRoom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
         }
     }
 }
