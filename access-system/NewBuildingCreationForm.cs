@@ -1,29 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using access_system.Entities;
+using System;
 using System.Windows.Forms;
-//using access_system.Utils;
 
 namespace access_system
 {
     public partial class NewBuildingCreationForm : Form
     {
-        private int floorNumber;
-        private int roomNumber;
+        private int _floorNumber;
+        private int _roomNumber;
 
-        private readonly int windowHeight = 460;
-        private readonly int windowWidth = 710;        
+        private readonly int _windowHeight = 460;
+        private readonly int _windowWidth = 710;        
 
         public NewBuildingCreationForm()
         {
             InitializeComponent();
-            this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
-            this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            this.MinimumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
+            this.MaximumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
             this.MaximizeBox = false;
         }
 
@@ -43,11 +36,19 @@ namespace access_system
         {
             try
             {
+                BuildingEntity buildingEntity = new BuildingEntity(_floorNumber, _roomNumber);
+                Building building = new Building(buildingEntity);
+                SecurityPostForm spf = new SecurityPostForm();
+                building.Show();                
+                spf.Show();
+                Hide();
                 /*if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
                 {
-                    floorNumber = Int32.Parse(floorNumberTextBox.Text);
-                    roomNumber = Int32.Parse(roomNumberTextBox.Text);
-                    Building building = new Building(floorNumber, roomNumber, new Utils.BuildingAndComponents.Building(floorNumber, roomNumber));
+                    _floorNumber = Int32.Parse(floorNumberTextBox.Text);
+                    _roomNumber = Int32.Parse(roomNumberTextBox.Text);
+                    Building building = new Building(_floorNumber, _roomNumber, new Utils.BuildingAndComponents.Building(_floorNumber, _roomNumber));
+                    SecurityPostForm spf = new SecurityPostForm();
+                    building.L
                     building.Show();
                     Hide();
                 }
