@@ -5,12 +5,12 @@
     /// </summary>
     public enum RoomTypes
     {
-        OfficeSpace,
-        Classroom,
-        LectureRoom,
-        GeneralPurpose,
-        Laboratory,
-        StaffOnly,
-        RoomTypeIsNotDefined
+        OfficeSpace = 0,
+        Classroom = 1,
+        LectureRoom = 2,
+        GeneralPurpose = 3,
+        Laboratory = 4,
+        StaffOnly = 5,
+        RoomTypeIsNotDefined = 6
     }
 }

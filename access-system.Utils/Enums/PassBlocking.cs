@@ -5,7 +5,7 @@
     /// </summary>
     public enum PassBlocking
     {
-        Locked,
-        Unlocked
+        Locked = 0,
+        Unlocked = 1
     }
 }

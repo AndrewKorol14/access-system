@@ -5,10 +5,10 @@
     /// </summary>
     public enum UserTypes
     {
-        Teacher,
-        ServiceStaff,
-        Administration,
-        Security,
-        Student
+        Teacher = 0,
+        ServiceStaff = 1,
+        Administration = 2,
+        Security = 3,
+        Student = 4
     }
 }

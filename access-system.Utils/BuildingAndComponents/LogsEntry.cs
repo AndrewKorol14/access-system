@@ -7,7 +7,7 @@ namespace access_system.Utils.BuildingAndComponents
     {
         private User user;
         private Room room;
-        public bool LoginResult { get; private set; }
+        public bool LoginResult { get;}
         private DateTime loginAttemptTime;
 
         public LogsEntry(User user, Room room, bool loginResult, DateTime loginAttemptTime)

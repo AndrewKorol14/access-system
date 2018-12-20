@@ -9,8 +9,8 @@ namespace access_system.Utils.BuildingAndComponents
 {
     internal class Room
     {
-        public int RoomNumber { get; private set; }
-        public int FloorNumber { get; private set; }
+        public int RoomNumber { get;}
+        public int FloorNumber { get;}
         public string RoomName { get; set; }
         public RoomTypes RoomType { get; set; }
         private Lock roomLock;

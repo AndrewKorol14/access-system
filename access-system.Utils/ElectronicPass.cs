@@ -12,7 +12,7 @@ namespace access_system.Utils
     /// </summary>
     public class ElectronicPass
     {
-        public PassBlocking BlockingStatus { get; private set; }
+        public PassBlocking BlockingStatus { get; private set;}
         public int CardNumber { get; private set; }
 
         public ElectronicPass(PassBlocking blockingStatus, int cardNumber)
