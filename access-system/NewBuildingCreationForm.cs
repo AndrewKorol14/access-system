@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using access_system.Utils;
+//using access_system.Utils;
 
 namespace access_system
 {
@@ -43,7 +43,7 @@ namespace access_system
         {
             try
             {
-                if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
+                /*if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
                 {
                     floorNumber = Int32.Parse(floorNumberTextBox.Text);
                     roomNumber = Int32.Parse(roomNumberTextBox.Text);
@@ -62,7 +62,7 @@ namespace access_system
                         floorNumberTextBox.Clear();
                         roomNumberTextBox.Clear();
                     }
-                }
+                }*/
             }
             catch(ArgumentException ex)
             {

@@ -21,13 +21,13 @@ namespace access_system
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
 
-        private access_system.Utils.BuildingAndComponents.Building buildingModel;
+       // private access_system.Utils.BuildingAndComponents.Building buildingModel;
 
-        public Building(int floorsNumber, int roomsNumber, access_system.Utils.BuildingAndComponents.Building buildingModel)
+        public Building(int floorsNumber, int roomsNumber/*, /*access_system.Utils.BuildingAndComponents.Building buildingModel*/)
         {
             this.floorsNumber = floorsNumber;
             this.roomsNumber = roomsNumber;
-            this.buildingModel = buildingModel;
+            //this.buildingModel = buildingModel;
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);            

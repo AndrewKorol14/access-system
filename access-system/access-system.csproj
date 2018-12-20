@@ -152,20 +152,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
-      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
-      <Name>access-system.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\access-system.Presenters\access-system.Presenters.csproj">
-      <Project>{648db0f2-25ee-409b-aa0d-7502f21f66cf}</Project>
-      <Name>access-system.Presenters</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\access-system.Utils\access-system.Utils.csproj">
-      <Project>{84112096-1445-4bde-bcd4-9c4aacc25ce3}</Project>
-      <Name>access-system.Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
