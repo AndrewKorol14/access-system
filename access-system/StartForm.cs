@@ -29,6 +29,8 @@ namespace access_system
                 IBuildingServices buildingService = new BuildingService(jbr);
                 buildingService.GetBuilding(ofd.FileName);
                 Building buildingForm = new Building(((BuildingService)buildingService).buildingEntity);
+                SecurityPostForm spf = new SecurityPostForm();
+                spf.Show();
                 buildingForm.Show();
                 Hide(); 
             }

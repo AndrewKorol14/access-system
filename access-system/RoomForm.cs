@@ -83,9 +83,18 @@ namespace access_system
             backButton.Width = backButtonWidth;
             backButton.Height = roomButtonHeight;
             backButton.BackColor = Color.Salmon;
+            backButton.Left = secondLeft;
+            backButton.Top = top + backButton.Height + 20;
             backButton.Text = "Back";
+            backButton.Click += backButton_Click;
             this.Controls.Add(panel);
-            panel.Controls.Add(floorNumberLabel);        
+            panel.Controls.Add(floorNumberLabel);
+            panel.Controls.Add(backButton);       
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //Building buildingForm = new Building();
         }
 
         private void roomButton_Click(object sender, EventArgs e)
