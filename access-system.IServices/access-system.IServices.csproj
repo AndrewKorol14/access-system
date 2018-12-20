@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBuildingServices.cs" />
+    <Compile Include="ISecurityPostServices1.cs" />
     <Compile Include="IStartService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -47,6 +49,14 @@
     <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
       <Project>{8A3A4F3A-A31C-463F-8F46-2227F24417C4}</Project>
       <Name>access-system.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.Enums\access-system.Enums.csproj">
+      <Project>{b5eec886-288a-412d-a5b7-89644f01f57e}</Project>
+      <Name>access-system.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.IRepositories\access-system.IRepositories.csproj">
+      <Project>{263b7585-1183-454d-ad7d-6b194f0334e4}</Project>
+      <Name>access-system.IRepositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

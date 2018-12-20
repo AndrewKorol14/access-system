@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartService.cs" />
   </ItemGroup>
@@ -47,6 +48,10 @@
     <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
       <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
       <Name>access-system.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.Enums\access-system.Enums.csproj">
+      <Project>{B5EEC886-288A-412D-A5B7-89644F01F57E}</Project>
+      <Name>access-system.Enums</Name>
     </ProjectReference>
     <ProjectReference Include="..\access-system.IRepositories\access-system.IRepositories.csproj">
       <Project>{263b7585-1183-454d-ad7d-6b194f0334e4}</Project>

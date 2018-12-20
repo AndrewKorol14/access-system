@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AccessModeEntity.cs" />
     <Compile Include="BuildingEntity.cs" />
+    <Compile Include="ElectronicPassEntity.cs" />
     <Compile Include="FloorEntity.cs" />
     <Compile Include="LockEntity.cs" />
     <Compile Include="LogEntryEntity.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="RoomEntity.cs" />
     <Compile Include="SecurityPostEntity.cs" />
     <Compile Include="UI\StartFormEntity.cs" />
+    <Compile Include="UserEntity.cs" />
     <Compile Include="VisitingLogEntity.cs" />
   </ItemGroup>
   <ItemGroup>

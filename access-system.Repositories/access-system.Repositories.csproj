@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\access-system\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JsonBuildingRepositore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
+      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
+      <Name>access-system.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.IRepositories\access-system.IRepositories.csproj">
+      <Project>{263b7585-1183-454d-ad7d-6b194f0334e4}</Project>
+      <Name>access-system.IRepositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
