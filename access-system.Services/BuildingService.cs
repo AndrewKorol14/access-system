@@ -27,7 +27,7 @@ namespace Services
 
         public bool AddPassForUser(int passNumber, int userId)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName)
@@ -43,7 +43,7 @@ namespace Services
 
         public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber, int floorNumber)
         {
-            throw new NotImplementedException();
+            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomLock.UsersWhithUniqueAccess.Add(user.UniqeID);
         }
 
         public void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus)
@@ -67,11 +67,6 @@ namespace Services
         }
 
         public void SetBuilding(string directoryForSave, BuildingEntity buildingToWriteToFile)
-        {
-            throw new NotImplementedException();
-        }
-
-        public BuildingEntity GetBuilding(string wayToFile)
         {
             throw new NotImplementedException();
         }

@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Repositories
 {
-    class JsonBuildingRepositore : IBuildingRepositore
+    public class JsonBuildingRepositore : IBuildingRepositore
     {
         private static object lockObject = new object();
 
