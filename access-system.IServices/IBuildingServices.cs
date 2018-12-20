@@ -10,9 +10,7 @@ namespace access_system.IServices
 {
     public interface IBuildingServices
     {
-        BuildingEntity GetBuilding(string wayToFile);
-
-        void SetBuilding(string directoryForSave, BuildingEntity buildingToWriteToFile);
+       void GetBuilding(string wayToFile);
 
         void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName);
 
@@ -20,7 +18,7 @@ namespace access_system.IServices
 
         void AddAccesModifierForRoom(UserTypes type, int roomNumber, int floorNumber);
 
-        void SaveBuildingToFile(IBuildingServices reader, string pathToFile);
+        void SaveBuildingToFile(string pathToFile);
 
         string EmulateEntrance(int userId, int floorNumber, int roomNumber);
 

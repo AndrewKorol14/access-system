@@ -6,16 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 using access_system.Entities;
 using access_system.Enums;
+using IRepositories;
 
 namespace Services
 {
-    class BuildingService : IBuildingServices
+    public class BuildingService : IBuildingServices
     {
         private BuildingEntity buildingEntity;
+        private IBuildingRepositore repositore;
+
+        public BuildingService(IBuildingRepositore repositore)
+        {
+            this.repositore = repositore;
+        }
 
         public void AddAccesModifierForRoom(UserTypes type, int roomNumber, int floorNumber)
         {
-            throw new NotImplementedException();
+            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomLock.CategoriesWithAccess.TypesUsersWithAccess.Add(type);
         }
 
         public bool AddPassForUser(int passNumber, int userId)
@@ -25,7 +32,8 @@ namespace Services
 
         public void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName)
         {
-            throw new NotImplementedException();
+            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomName = roomName;
+            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomType = roomType;
         }
 
         public bool AddUserToSystem(string FirsName, string LastName, int uniqeID)
@@ -53,17 +61,7 @@ namespace Services
             throw new NotImplementedException();
         }
 
-        public BuildingEntity GetBuilding(string wayToFile)
-        {
-            throw new NotImplementedException();
-        }
-
         public UserEntity GetUser(int UserId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveBuildingToFile(IBuildingServices reader, string pathToFile)
         {
             throw new NotImplementedException();
         }
@@ -71,6 +69,21 @@ namespace Services
         public void SetBuilding(string directoryForSave, BuildingEntity buildingToWriteToFile)
         {
             throw new NotImplementedException();
+        }
+
+        public BuildingEntity GetBuilding(string wayToFile)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveBuildingToFile(string pathToFile)
+        {
+            repositore.SetBuilding(pathToFile, buildingEntity);
+        }
+
+        void IBuildingServices.GetBuilding(string wayToFile)
+        {
+            buildingEntity = repositore.GetBuilding(wayToFile);
         }
     }
 }

@@ -8,8 +8,8 @@ namespace access_system.Entities
         public  List<FloorEntity> Floors { get; set; }
         public int FloorNumber { get;}
         public int RoomsNumber { get;}
-        private VisitingLogEntity VisitingLogs;
-        private SecurityPostEntity SecurityPost;
+        public VisitingLogEntity VisitingLogs { get; set; }
+        public SecurityPostEntity SecurityPost { get; set; }
 
         public BuildingEntity(int floorNumber, int roomsNumber)
         {

@@ -58,6 +58,10 @@
       <Project>{263b7585-1183-454d-ad7d-6b194f0334e4}</Project>
       <Name>access-system.IRepositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\access-system.Repositories\access-system.Repositories.csproj">
+      <Project>{c66e19b5-aa6e-407d-8b6f-8747de572526}</Project>
+      <Name>access-system.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,7 @@
 
 namespace access_system.Entities
 {
-    class VisitingLogEntity
+    public class VisitingLogEntity
     {
         private List<LogEntryEntity> _logsEntries;
     }

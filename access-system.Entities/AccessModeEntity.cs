@@ -3,13 +3,13 @@ using access_system.Enums;
 
 namespace access_system.Entities
 {
-    class AccessModeEntity
+    public class AccessModeEntity
     {
-        private List<UserTypes> _typesUsersWithAccess;
+        public List<UserTypes> TypesUsersWithAccess { get; set; }
 
         public AccessModeEntity()
         {
-            _typesUsersWithAccess = new List<UserTypes>();
+            TypesUsersWithAccess = new List<UserTypes>();
         }
     }
 }

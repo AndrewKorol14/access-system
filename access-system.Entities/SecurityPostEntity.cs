@@ -2,7 +2,7 @@
 
 namespace access_system.Entities
 {
-    class SecurityPostEntity
+    public class SecurityPostEntity
     {
         /*private List<User> _users;
         private List<ElectronicPass> _electronicPasses;
