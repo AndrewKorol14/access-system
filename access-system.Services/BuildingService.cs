@@ -100,7 +100,7 @@ namespace Services
 
         public string EmulateEntrance(int userId, int floorNumber, int roomNumber)
         {
-           
+            return null;
         }
 
         public void SetBuilding(BuildingEntity building)
