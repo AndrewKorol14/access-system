@@ -12,7 +12,7 @@ namespace Services
 {
     public class BuildingService : IBuildingServices
     {
-        private BuildingEntity buildingEntity;
+        public BuildingEntity buildingEntity;
         private IBuildingRepositore repositore;
 
         public BuildingService(IBuildingRepositore repositore)
@@ -27,7 +27,26 @@ namespace Services
 
         public bool AddPassForUser(int passNumber, int userId)
         {
-            
+            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
+            {
+                foreach (ElectronicPassEntity nextPass in nextUser.ElectronicPasses)
+                {
+                    if (nextPass.CardNumber == passNumber)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
+            {
+                if (nextUser.UniqeID == userId)
+                {
+                    nextUser.ElectronicPasses.Add(buildingEntity.SecurityPost.ElectronicPasses.Where(next => next.CardNumber == passNumber).Single());
+                    break;
+                }
+            }
+            return true;
         }
 
         public void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName)
@@ -38,7 +57,15 @@ namespace Services
 
         public bool AddUserToSystem(string FirsName, string LastName, int uniqeID)
         {
-            throw new NotImplementedException();
+            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
+            {
+                if (nextUser.UniqeID == uniqeID)
+                {
+                    return false;
+                }
+            }
+            buildingEntity.SecurityPost.Users.Add(new UserEntity(FirsName, LastName, uniqeID));
+            return true;
         }
 
         public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber, int floorNumber)
@@ -48,7 +75,14 @@ namespace Services
 
         public void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus)
         {
-            throw new NotImplementedException();
+            foreach (ElectronicPassEntity nextPass in buildingEntity.SecurityPost.ElectronicPasses)
+            {
+                if (nextPass.CardNumber == passNumber)
+                {
+                    nextPass.BlockingStatus = newStatus;
+                    break;
+                }
+            }
         }
 
         public bool CreateElectronicPass(PassBlocking passStatus, int cardNumber)

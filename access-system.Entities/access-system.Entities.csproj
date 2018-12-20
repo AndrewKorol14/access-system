@@ -44,6 +44,7 @@
     <Compile Include="BuildingEntity.cs" />
     <Compile Include="ElectronicPassEntity.cs" />
     <Compile Include="FloorEntity.cs" />
+    <Compile Include="LockCreator.cs" />
     <Compile Include="LockEntity.cs" />
     <Compile Include="LogEntryEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

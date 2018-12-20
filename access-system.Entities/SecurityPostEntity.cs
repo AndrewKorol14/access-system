@@ -4,7 +4,7 @@ namespace access_system.Entities
 {
     public class SecurityPostEntity
     {
-        private List<UserEntity> Users;
-        private List<ElectronicPassEntity> ElectronicPasses;
+        public List<UserEntity> Users { get; set; }
+        public List<ElectronicPassEntity> ElectronicPasses { get; set; }
     }
 }

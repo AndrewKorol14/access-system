@@ -12,5 +12,11 @@ namespace access_system.Entities
             CategoriesWithAccess = categoriesWithAcces;
             UsersWhithUniqueAccess = usersWhithUniqueAcces;
         }
+
+        public LockEntity()
+        {
+            UsersWhithUniqueAccess = new List<int>();
+            CategoriesWithAccess = new AccessModeEntity();
+        }
     }
 }

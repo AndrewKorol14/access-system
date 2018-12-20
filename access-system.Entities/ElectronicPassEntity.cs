@@ -9,7 +9,7 @@ namespace access_system.Entities
 {
     public class ElectronicPassEntity
     {
-        public PassBlocking BlockingStatus { get; private set; }
-        public int CardNumber { get; private set; }
+        public PassBlocking BlockingStatus { get; set; }
+        public int CardNumber { get; set; }
     }
 }

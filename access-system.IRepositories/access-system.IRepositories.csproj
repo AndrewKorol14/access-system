@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IBuildingRepositore.cs" />
     <Compile Include="IStartRepository.cs" />
+    <Compile Include="LockCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

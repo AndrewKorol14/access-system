@@ -14,5 +14,13 @@ namespace access_system.Entities
         public List<ElectronicPassEntity> ElectronicPasses { get; private set; }
         public int UniqeID { get; private set; }
         public UserTypes UserType { get; private set; }
+
+        public UserEntity(string FirsName, string LastName, int uniqeID)
+        {
+            this.FirsName = FirsName;
+            this.LastName = LastName;
+            UniqeID = uniqeID;
+            ElectronicPasses = new List<ElectronicPassEntity>();
+        }
     }
 }
