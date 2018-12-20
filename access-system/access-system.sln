@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "access-system", "access-sys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "access-system.Utils", "..\access-system.Utils\access-system.Utils.csproj", "{84112096-1445-4BDE-BCD4-9C4AACC25CE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "access-system.Presenters", "..\access-system.Presenters\access-system.Presenters.csproj", "{648DB0F2-25EE-409B-AA0D-7502F21F66CF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "access-system.Entities", "..\access-system.Entities\access-system.Entities.csproj", "{8A3A4F3A-A31C-463F-8F46-2227F24417C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "access-system.Enums", "..\access-system.Enums\access-system.Enums.csproj", "{B5EEC886-288A-412D-A5B7-89644F01F57E}"
@@ -35,10 +33,6 @@ Global
 		{84112096-1445-4BDE-BCD4-9C4AACC25CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84112096-1445-4BDE-BCD4-9C4AACC25CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84112096-1445-4BDE-BCD4-9C4AACC25CE3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{648DB0F2-25EE-409B-AA0D-7502F21F66CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{648DB0F2-25EE-409B-AA0D-7502F21F66CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{648DB0F2-25EE-409B-AA0D-7502F21F66CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{648DB0F2-25EE-409B-AA0D-7502F21F66CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A3A4F3A-A31C-463F-8F46-2227F24417C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A3A4F3A-A31C-463F-8F46-2227F24417C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3A4F3A-A31C-463F-8F46-2227F24417C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
