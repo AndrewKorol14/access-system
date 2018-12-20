@@ -1,4 +1,6 @@
 ﻿using access_system;
+using access_system.Entities;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,10 +25,10 @@ namespace access_system
 
        // private access_system.Utils.BuildingAndComponents.Building buildingModel;
 
-        public Building(int floorsNumber, int roomsNumber/*, /*access_system.Utils.BuildingAndComponents.Building buildingModel*/)
+        public Building(BuildingEntity buildingEntity)
         {
-            this.floorsNumber = floorsNumber;
-            this.roomsNumber = roomsNumber;
+            this.floorsNumber = buildingEntity.FloorNumber;
+            this.roomsNumber = buildingEntity.RoomsNumber;
             //this.buildingModel = buildingModel;
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);

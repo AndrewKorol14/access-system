@@ -1,6 +1,6 @@
 ﻿namespace access_system
 {
-    partial class Building
+    partial class VisitingLogForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Building));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisitingLogForm));
             this.SuspendLayout();
             // 
-            // Building
+            // VisitingLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(544, 354);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(300, 300);
-            this.Name = "Building";
-            this.Text = "Building";
-            this.Load += new System.EventHandler(this.Building_Load);
+            this.Name = "VisitingLogForm";
+            this.Text = "VisitingLogForm";
             this.ResumeLayout(false);
 
         }

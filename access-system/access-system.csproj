@@ -103,6 +103,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitingLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitingLogForm.Designer.cs">
+      <DependentUpon>VisitingLogForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Building.resx">
       <DependentUpon>Building.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VisitingLogForm.resx">
+      <DependentUpon>VisitingLogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,6 +160,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
+      <Project>{8a3a4f3a-a31c-463f-8f46-2227f24417c4}</Project>
+      <Name>access-system.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.IRepositories\access-system.IRepositories.csproj">
+      <Project>{263b7585-1183-454d-ad7d-6b194f0334e4}</Project>
+      <Name>access-system.IRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.IServices\access-system.IServices.csproj">
+      <Project>{7eb4261c-7f00-4f39-aa84-b6c7e9c00dbc}</Project>
+      <Name>access-system.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.Repositories\access-system.Repositories.csproj">
+      <Project>{c66e19b5-aa6e-407d-8b6f-8747de572526}</Project>
+      <Name>access-system.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.Services\access-system.Services.csproj">
+      <Project>{aa202144-347f-439d-9927-3fecba8598ce}</Project>
+      <Name>access-system.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

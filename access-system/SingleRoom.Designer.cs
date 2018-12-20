@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingleRoom));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.floorNumberLabel = new System.Windows.Forms.Label();
+            this.roomNumberLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.roomNameComboBox = new System.Windows.Forms.ComboBox();
+            this.roomTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.accessModeCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.specialIDCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,27 +68,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Room number:";
             // 
-            // label3
+            // floorNumberLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(461, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "__";
+            this.floorNumberLabel.AutoSize = true;
+            this.floorNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.floorNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.floorNumberLabel.Location = new System.Drawing.Point(461, 27);
+            this.floorNumberLabel.Name = "floorNumberLabel";
+            this.floorNumberLabel.Size = new System.Drawing.Size(0, 20);
+            this.floorNumberLabel.TabIndex = 2;
             // 
-            // label4
+            // roomNumberLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(461, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "__";
+            this.roomNumberLabel.AutoSize = true;
+            this.roomNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.roomNumberLabel.Location = new System.Drawing.Point(461, 79);
+            this.roomNumberLabel.Name = "roomNumberLabel";
+            this.roomNumberLabel.Size = new System.Drawing.Size(0, 20);
+            this.roomNumberLabel.TabIndex = 3;
             // 
             // label5
             // 
@@ -135,53 +133,53 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Special ID:";
             // 
-            // comboBox1
+            // roomNameComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(421, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 14;
+            this.roomNameComboBox.FormattingEnabled = true;
+            this.roomNameComboBox.Location = new System.Drawing.Point(421, 141);
+            this.roomNameComboBox.Name = "roomNameComboBox";
+            this.roomNameComboBox.Size = new System.Drawing.Size(121, 23);
+            this.roomNameComboBox.TabIndex = 14;
             // 
-            // comboBox2
+            // roomTypeComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(421, 191);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 15;
+            this.roomTypeComboBox.FormattingEnabled = true;
+            this.roomTypeComboBox.Location = new System.Drawing.Point(421, 191);
+            this.roomTypeComboBox.Name = "roomTypeComboBox";
+            this.roomTypeComboBox.Size = new System.Drawing.Size(121, 23);
+            this.roomTypeComboBox.TabIndex = 15;
             // 
-            // checkedListBox1
+            // accessModeCheckedListBox
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.White;
-            this.checkedListBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.accessModeCheckedListBox.BackColor = System.Drawing.Color.White;
+            this.accessModeCheckedListBox.ForeColor = System.Drawing.Color.Black;
+            this.accessModeCheckedListBox.FormattingEnabled = true;
+            this.accessModeCheckedListBox.Items.AddRange(new object[] {
             "Security",
             "Administration",
             "Teacher",
             "Student",
             "Staff"});
-            this.checkedListBox1.Location = new System.Drawing.Point(421, 244);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(121, 68);
-            this.checkedListBox1.TabIndex = 16;
+            this.accessModeCheckedListBox.Location = new System.Drawing.Point(421, 244);
+            this.accessModeCheckedListBox.Name = "accessModeCheckedListBox";
+            this.accessModeCheckedListBox.Size = new System.Drawing.Size(121, 68);
+            this.accessModeCheckedListBox.TabIndex = 16;
             // 
-            // checkedListBox2
+            // specialIDCheckedListBox
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.White;
-            this.checkedListBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.specialIDCheckedListBox.BackColor = System.Drawing.Color.White;
+            this.specialIDCheckedListBox.ForeColor = System.Drawing.Color.Black;
+            this.specialIDCheckedListBox.FormattingEnabled = true;
+            this.specialIDCheckedListBox.Items.AddRange(new object[] {
             "123456",
             "789015",
             "154631",
             "626623",
             "689899"});
-            this.checkedListBox2.Location = new System.Drawing.Point(421, 348);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(143, 52);
-            this.checkedListBox2.TabIndex = 17;
+            this.specialIDCheckedListBox.Location = new System.Drawing.Point(421, 348);
+            this.specialIDCheckedListBox.Name = "specialIDCheckedListBox";
+            this.specialIDCheckedListBox.Size = new System.Drawing.Size(143, 52);
+            this.specialIDCheckedListBox.TabIndex = 17;
             // 
             // SingleRoom
             // 
@@ -189,16 +187,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(743, 419);
-            this.Controls.Add(this.checkedListBox2);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.specialIDCheckedListBox);
+            this.Controls.Add(this.accessModeCheckedListBox);
+            this.Controls.Add(this.roomTypeComboBox);
+            this.Controls.Add(this.roomNameComboBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.roomNumberLabel);
+            this.Controls.Add(this.floorNumberLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -214,15 +212,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label floorNumberLabel;
+        private System.Windows.Forms.Label roomNumberLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.ComboBox roomNameComboBox;
+        private System.Windows.Forms.ComboBox roomTypeComboBox;
+        private System.Windows.Forms.CheckedListBox accessModeCheckedListBox;
+        private System.Windows.Forms.CheckedListBox specialIDCheckedListBox;
     }
 }

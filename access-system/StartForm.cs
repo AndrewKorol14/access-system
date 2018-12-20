@@ -1,4 +1,7 @@
-﻿using System;
+﻿using access_system.IServices;
+using Repositories;
+using Services;
+using System;
 using System.Windows.Forms;
 
 namespace access_system
@@ -22,7 +25,12 @@ namespace access_system
             ofd.Filter = "JSON(*.json)|*.json";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                string filename = ofd.FileName;
+                JsonBuildingRepositore jbr = new JsonBuildingRepositore();
+                IBuildingServices buildingService = new BuildingService(jbr);
+                buildingService.GetBuilding(ofd.FileName);
+                Building buildingForm = new Building(((BuildingService)buildingService).buildingEntity);
+                buildingForm.Show();
+                Hide(); 
             }
         }
 

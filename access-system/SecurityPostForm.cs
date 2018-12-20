@@ -12,9 +12,15 @@ namespace access_system
 {
     public partial class SecurityPostForm : Form
     {
+        private readonly int _windowHeight = 460;
+        private readonly int _windowWidth = 573;
+
         public SecurityPostForm()
         {
             InitializeComponent();
+            this.MinimumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
+            this.MaximumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
+            this.MaximizeBox = false;
         }
 
         private void createCardButton_Click(object sender, EventArgs e)

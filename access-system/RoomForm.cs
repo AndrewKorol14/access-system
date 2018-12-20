@@ -84,17 +84,8 @@ namespace access_system
             backButton.Height = roomButtonHeight;
             backButton.BackColor = Color.Salmon;
             backButton.Text = "Back";
-
-
-
-
-
             this.Controls.Add(panel);
-            panel.Controls.Add(floorNumberLabel);
-            
-
-
-
+            panel.Controls.Add(floorNumberLabel);        
         }
 
         private void roomButton_Click(object sender, EventArgs e)
