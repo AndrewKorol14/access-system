@@ -87,22 +87,25 @@ namespace Services
 
         public bool CreateElectronicPass(PassBlocking passStatus, int cardNumber)
         {
-            throw new NotImplementedException();
+            foreach (ElectronicPassEntity nextPass in buildingEntity.SecurityPost.ElectronicPasses)
+            {
+                if (nextPass.CardNumber == cardNumber)
+                {
+                    return false;
+                }
+            }
+            buildingEntity.SecurityPost.ElectronicPasses.Add(new ElectronicPassEntity(passStatus, cardNumber));
+            return true;
         }
 
         public string EmulateEntrance(int userId, int floorNumber, int roomNumber)
         {
-            throw new NotImplementedException();
+           
         }
 
-        public UserEntity GetUser(int UserId)
+        public void SetBuilding(BuildingEntity building)
         {
-            throw new NotImplementedException();
-        }
-
-        public void SetBuilding(string directoryForSave, BuildingEntity buildingToWriteToFile)
-        {
-            throw new NotImplementedException();
+            buildingEntity = building;
         }
 
         public void SaveBuildingToFile(string pathToFile)

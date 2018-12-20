@@ -11,5 +11,11 @@ namespace access_system.Entities
     {
         public PassBlocking BlockingStatus { get; set; }
         public int CardNumber { get; set; }
+
+        public ElectronicPassEntity(PassBlocking blockingStatus, int cardNumber)
+        {
+            BlockingStatus = blockingStatus;
+            CardNumber = cardNumber;
+        }
     }
 }
