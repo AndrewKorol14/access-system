@@ -41,6 +41,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoomForm";
             this.Text = "Room";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RoomForm_FormClosing);
             this.ResumeLayout(false);
 
         }

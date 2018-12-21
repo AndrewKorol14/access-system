@@ -186,6 +186,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CardCreationForm";
             this.Text = "Card creation ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CardCreationForm_FormClosing);
             this.Load += new System.EventHandler(this.CardCreationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

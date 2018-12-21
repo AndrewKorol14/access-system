@@ -43,8 +43,19 @@ namespace access_system
 
         private void emulateEntranceButton_Click(object sender, EventArgs e)
         {
-            EmulateEntranceForm emulateEntranceForm = new EmulateEntranceForm();
+            EmulateEntranceForm emulateEntranceForm = new EmulateEntranceForm(this);
             emulateEntranceForm.Show();
+            Hide();
+        }
+
+        private void SecurityPostForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
+
+        private void showLogButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

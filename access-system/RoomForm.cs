@@ -117,5 +117,10 @@ namespace access_system
             //panel.Controls.Add(floorNumberLabel);
             // Controls.Add(floorNumberLabel);
         }
+
+        private void RoomForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            buildingForm.Show();
+        }
     }
 }

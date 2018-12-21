@@ -29,30 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmulateEntranceForm));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.floorNumberTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.roomNumberTextBox = new System.Windows.Forms.TextBox();
+            this.emulateButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.electronicPassComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 21);
-            this.comboBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(206, 19);
+            this.label1.Location = new System.Drawing.Point(301, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 20);
             this.label1.TabIndex = 1;
@@ -70,13 +62,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Enter floor number:";
             // 
-            // textBox1
+            // floorNumberTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox1.Location = new System.Drawing.Point(305, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 3;
+            this.floorNumberTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.floorNumberTextBox.Location = new System.Drawing.Point(345, 109);
+            this.floorNumberTextBox.Name = "floorNumberTextBox";
+            this.floorNumberTextBox.Size = new System.Drawing.Size(128, 20);
+            this.floorNumberTextBox.TabIndex = 3;
+            this.floorNumberTextBox.TextChanged += new System.EventHandler(this.allFields_Filled);
             // 
             // label3
             // 
@@ -89,40 +82,53 @@
             this.label3.Size = new System.Drawing.Size(117, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Enter room number:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // roomNumberTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox2.Location = new System.Drawing.Point(305, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 5;
+            this.roomNumberTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.roomNumberTextBox.Location = new System.Drawing.Point(345, 178);
+            this.roomNumberTextBox.Name = "roomNumberTextBox";
+            this.roomNumberTextBox.Size = new System.Drawing.Size(128, 20);
+            this.roomNumberTextBox.TabIndex = 5;
+            this.roomNumberTextBox.TextChanged += new System.EventHandler(this.allFields_Filled);
             // 
-            // button2
+            // emulateButton
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOrange;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(209, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Emulate";
-            this.button2.UseVisualStyleBackColor = false;
+            this.emulateButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.emulateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.emulateButton.ForeColor = System.Drawing.Color.Black;
+            this.emulateButton.Location = new System.Drawing.Point(327, 256);
+            this.emulateButton.Name = "emulateButton";
+            this.emulateButton.Size = new System.Drawing.Size(146, 23);
+            this.emulateButton.TabIndex = 7;
+            this.emulateButton.Text = "Emulate";
+            this.emulateButton.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // backButton
             // 
-            this.button5.BackColor = System.Drawing.Color.Salmon;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(494, 327);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 37);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Back";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.backButton.BackColor = System.Drawing.Color.Salmon;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.backButton.ForeColor = System.Drawing.Color.Black;
+            this.backButton.Location = new System.Drawing.Point(494, 327);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(83, 37);
+            this.backButton.TabIndex = 8;
+            this.backButton.Text = "Back";
+            this.backButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // electronicPassComboBox
+            // 
+            this.electronicPassComboBox.BackColor = System.Drawing.Color.White;
+            this.electronicPassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.electronicPassComboBox.FormattingEnabled = true;
+            this.electronicPassComboBox.Items.AddRange(new object[] {
+            "Test"});
+            this.electronicPassComboBox.Location = new System.Drawing.Point(266, 59);
+            this.electronicPassComboBox.Name = "electronicPassComboBox";
+            this.electronicPassComboBox.Size = new System.Drawing.Size(299, 21);
+            this.electronicPassComboBox.TabIndex = 11;
             // 
             // EmulateEntranceForm
             // 
@@ -131,32 +137,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(586, 374);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(694, 374);
+            this.Controls.Add(this.electronicPassComboBox);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.emulateButton);
+            this.Controls.Add(this.roomNumberTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.floorNumberTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmulateEntranceForm";
             this.Text = "Emulate entrance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmulateEntranceForm_FormClosing);
+            this.Load += new System.EventHandler(this.EmulateEntranceForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox floorNumberTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox roomNumberTextBox;
+        private System.Windows.Forms.Button emulateButton;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.ComboBox electronicPassComboBox;
     }
 }

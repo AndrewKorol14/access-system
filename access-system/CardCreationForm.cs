@@ -51,5 +51,10 @@ namespace access_system
             spf.Show();
             Close();
         }
+
+        private void CardCreationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            spf.Show();
+        }
     }
 }
