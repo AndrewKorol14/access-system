@@ -32,14 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.userSurnameTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lockCheckBox = new System.Windows.Forms.CheckBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.userPositionComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,28 +78,29 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "ID:";
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(325, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 3;
+            this.userNameTextBox.Location = new System.Drawing.Point(325, 59);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(137, 20);
+            this.userNameTextBox.TabIndex = 3;
+            this.userNameTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
-            // textBox2
+            // userSurnameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(325, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.userSurnameTextBox.Location = new System.Drawing.Point(325, 107);
+            this.userSurnameTextBox.Name = "userSurnameTextBox";
+            this.userSurnameTextBox.Size = new System.Drawing.Size(137, 20);
+            this.userSurnameTextBox.TabIndex = 4;
+            this.userSurnameTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
-            // textBox3
+            // idTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(325, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.idTextBox.Location = new System.Drawing.Point(325, 199);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(137, 20);
+            this.idTextBox.TabIndex = 5;
+            this.idTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
             // label4
             // 
@@ -113,26 +114,27 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Lock/Unlock:";
             // 
-            // checkBox1
+            // lockCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(325, 248);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.lockCheckBox.AutoSize = true;
+            this.lockCheckBox.Location = new System.Drawing.Point(325, 248);
+            this.lockCheckBox.Name = "lockCheckBox";
+            this.lockCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.lockCheckBox.TabIndex = 7;
+            this.lockCheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(268, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 32);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.saveButton.ForeColor = System.Drawing.Color.Black;
+            this.saveButton.Location = new System.Drawing.Point(268, 292);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(82, 32);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label5
             // 
@@ -146,21 +148,22 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "User position:";
             // 
-            // comboBox1
+            // userPositionComboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.userPositionComboBox.BackColor = System.Drawing.Color.White;
+            this.userPositionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.userPositionComboBox.FormattingEnabled = true;
+            this.userPositionComboBox.Items.AddRange(new object[] {
             "Administration",
             "Security",
             "Staff",
             "Student",
             "Teacher"});
-            this.comboBox1.Location = new System.Drawing.Point(325, 150);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 10;
+            this.userPositionComboBox.Location = new System.Drawing.Point(325, 150);
+            this.userPositionComboBox.Name = "userPositionComboBox";
+            this.userPositionComboBox.Size = new System.Drawing.Size(137, 21);
+            this.userPositionComboBox.TabIndex = 10;
+            this.userPositionComboBox.SelectedIndexChanged += new System.EventHandler(this.allField_Filled);
             // 
             // CardCreationForm
             // 
@@ -168,14 +171,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(557, 359);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.userPositionComboBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.lockCheckBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(this.userSurnameTextBox);
+            this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -183,6 +186,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CardCreationForm";
             this.Text = "Card creation ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CardCreationForm_FormClosing);
+            this.Load += new System.EventHandler(this.CardCreationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,13 +198,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox userNameTextBox;
+        private System.Windows.Forms.TextBox userSurnameTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox lockCheckBox;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox userPositionComboBox;
     }
 }

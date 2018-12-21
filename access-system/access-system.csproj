@@ -59,6 +59,12 @@
     <Compile Include="CardCreationForm.Designer.cs">
       <DependentUpon>CardCreationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElectronicPassesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectronicPassesForm.Designer.cs">
+      <DependentUpon>ElectronicPassesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmulateEntranceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CardCreationForm.resx">
       <DependentUpon>CardCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectronicPassesForm.resx">
+      <DependentUpon>ElectronicPassesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmulateEntranceForm.resx">
       <DependentUpon>EmulateEntranceForm.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace access_system
 
         private void LockingCardForm_Load(object sender, EventArgs e)
         {
-
+            saveButton.Enabled = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -38,6 +38,29 @@ namespace access_system
         {
             spf.Show();
             Hide();
+        }
+
+        private void LockingCardForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            spf.Show();
+        }
+
+        private void userComboBox_TextChanged(object sender, EventArgs e)
+        {
+            if (userComboBox.Text != String.Empty)
+            {
+                saveButton.Enabled = true;
+                string[] separators = { ", " };
+                var userFieldsArray = userComboBox.Text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                positionLabel.Text = userFieldsArray[1];
+                var userNameArray = userFieldsArray[0].Split(' ');
+                nameLabel.Text = userNameArray[0];
+                surnameLabel.Text = userNameArray[1];
+            }
+            else
+            {
+                saveButton.Enabled = false;
+            }
         }
     }
 }

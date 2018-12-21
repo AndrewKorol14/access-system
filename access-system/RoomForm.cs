@@ -98,7 +98,13 @@ namespace access_system
 
         private void roomButton_Click(object sender, EventArgs e)
         {
-
+            var button = (Button)sender;
+            if (button != null)
+            {
+                SingleRoom singleRoom = new SingleRoom(button.Text, floor, this);
+                singleRoom.Show();
+                Hide();
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -116,6 +122,11 @@ namespace access_system
             //this.Controls.Add(panel);
             //panel.Controls.Add(floorNumberLabel);
             // Controls.Add(floorNumberLabel);
+        }
+
+        private void RoomForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            buildingForm.Show();
         }
     }
 }

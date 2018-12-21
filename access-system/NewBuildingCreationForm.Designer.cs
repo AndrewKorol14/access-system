@@ -120,6 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewBuildingCreationForm";
             this.Text = "Create new bulding";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewBuildingCreationForm_FormClosed);
             this.Load += new System.EventHandler(this.NewBuildingCreationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

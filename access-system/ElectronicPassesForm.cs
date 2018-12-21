@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace access_system
 {
-    public partial class VisitingLogForm : Form
+    public partial class ElectronicPassesForm : Form
     {
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
@@ -21,7 +21,7 @@ namespace access_system
 
         private Button backButton;
 
-        public VisitingLogForm(SecurityPostForm spf)
+        public ElectronicPassesForm(SecurityPostForm spf)
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
@@ -30,14 +30,14 @@ namespace access_system
 
             this.spf = spf;
 
-            visitingLogLabel.Text = "Visiting log";
+            electronicPassesLabel.Text = "Electronic Passes";
 
             backButton = new Button();
             backButton.Width = backButtonWidth;
             backButton.Height = backButtonHeight;
             backButton.BackColor = Color.Salmon;
             backButton.Left = 500;
-            backButton.Top = visitingLogLabel.Top + visitingLogLabel.Height + 50;
+            backButton.Top = electronicPassesLabel.Top + electronicPassesLabel.Height + 50;
             backButton.Text = "Back";
             backButton.Click += backButton_Click;
             this.Controls.Add(backButton);
@@ -49,7 +49,7 @@ namespace access_system
             Close();
         }
 
-        private void VisitingLogForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void ElectronicPassesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             spf.Show();
         }

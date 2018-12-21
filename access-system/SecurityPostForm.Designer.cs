@@ -41,7 +41,7 @@
             this.createCardButton.BackColor = System.Drawing.Color.DarkOrange;
             this.createCardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.createCardButton.ForeColor = System.Drawing.Color.Black;
-            this.createCardButton.Location = new System.Drawing.Point(233, 12);
+            this.createCardButton.Location = new System.Drawing.Point(266, 12);
             this.createCardButton.Name = "createCardButton";
             this.createCardButton.Size = new System.Drawing.Size(139, 38);
             this.createCardButton.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.emulateEntranceButton.BackColor = System.Drawing.Color.DarkOrange;
             this.emulateEntranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.emulateEntranceButton.ForeColor = System.Drawing.Color.Black;
-            this.emulateEntranceButton.Location = new System.Drawing.Point(232, 310);
+            this.emulateEntranceButton.Location = new System.Drawing.Point(265, 310);
             this.emulateEntranceButton.Name = "emulateEntranceButton";
             this.emulateEntranceButton.Size = new System.Drawing.Size(139, 37);
             this.emulateEntranceButton.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.lockCardButton.BackColor = System.Drawing.Color.DarkOrange;
             this.lockCardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lockCardButton.ForeColor = System.Drawing.Color.Black;
-            this.lockCardButton.Location = new System.Drawing.Point(235, 88);
+            this.lockCardButton.Location = new System.Drawing.Point(266, 82);
             this.lockCardButton.Name = "lockCardButton";
             this.lockCardButton.Size = new System.Drawing.Size(138, 37);
             this.lockCardButton.TabIndex = 2;
@@ -80,24 +80,26 @@
             this.showLogButton.BackColor = System.Drawing.Color.DarkOrange;
             this.showLogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.showLogButton.ForeColor = System.Drawing.Color.Black;
-            this.showLogButton.Location = new System.Drawing.Point(235, 163);
+            this.showLogButton.Location = new System.Drawing.Point(266, 159);
             this.showLogButton.Name = "showLogButton";
             this.showLogButton.Size = new System.Drawing.Size(138, 37);
             this.showLogButton.TabIndex = 3;
             this.showLogButton.Text = "Show visiting log";
             this.showLogButton.UseVisualStyleBackColor = false;
+            this.showLogButton.Click += new System.EventHandler(this.showLogButton_Click);
             // 
             // showPassButton
             // 
             this.showPassButton.BackColor = System.Drawing.Color.DarkOrange;
             this.showPassButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.showPassButton.ForeColor = System.Drawing.Color.Black;
-            this.showPassButton.Location = new System.Drawing.Point(233, 236);
+            this.showPassButton.Location = new System.Drawing.Point(266, 242);
             this.showPassButton.Name = "showPassButton";
             this.showPassButton.Size = new System.Drawing.Size(138, 41);
             this.showPassButton.TabIndex = 4;
             this.showPassButton.Text = "Show all electronic pass";
             this.showPassButton.UseVisualStyleBackColor = false;
+            this.showPassButton.Click += new System.EventHandler(this.showPassButton_Click);
             // 
             // SecurityPostForm
             // 
@@ -113,6 +115,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SecurityPostForm";
             this.Text = "Security post";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SecurityPostForm_FormClosing);
             this.ResumeLayout(false);
 
         }

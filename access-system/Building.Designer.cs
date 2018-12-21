@@ -43,6 +43,7 @@
             this.Location = new System.Drawing.Point(300, 300);
             this.Name = "Building";
             this.Text = "Building";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Building_FormClosing);
             this.Load += new System.EventHandler(this.Building_Load);
             this.ResumeLayout(false);
 
