@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -107,18 +107,19 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Lock/Unlock:";
             // 
-            // button5
+            // backButton
             // 
-            this.button5.BackColor = System.Drawing.Color.Salmon;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(452, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 37);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Back";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.backButton.BackColor = System.Drawing.Color.Salmon;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.backButton.ForeColor = System.Drawing.Color.Black;
+            this.backButton.Location = new System.Drawing.Point(452, 312);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(83, 37);
+            this.backButton.TabIndex = 6;
+            this.backButton.Text = "Back";
+            this.backButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // button1
             // 
@@ -139,7 +140,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(557, 359);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
@@ -163,7 +164,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button button1;
     }
 }

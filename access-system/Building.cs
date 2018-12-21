@@ -23,9 +23,11 @@ namespace access_system
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
 
+        public BuildingService buildingService;
+
        // private access_system.Utils.BuildingAndComponents.Building buildingModel;
 
-        public Building(BuildingEntity buildingEntity)
+        public Building(BuildingEntity buildingEntity, BuildingService buildingService)
         {
             this.floorsNumber = buildingEntity.FloorNumber;
             this.roomsNumber = buildingEntity.RoomsNumber;
@@ -34,6 +36,7 @@ namespace access_system
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);            
             this.MaximizeBox = false;
+            this.buildingService = buildingService;
         }
 
         private void Building_Load(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace access_system
             var button = (Button)sender;
             if(button != null)
             {
-                RoomForm roomForm = new RoomForm(roomsNumber, button.Text);
+                RoomForm roomForm = new RoomForm(roomsNumber, button.Text, this);
                 roomForm.Show();
                 Hide();
             }

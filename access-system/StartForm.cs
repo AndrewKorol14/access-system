@@ -11,12 +11,17 @@ namespace access_system
         private readonly int _windowHeight = 460;
         private readonly int _windowWidth = 710;
 
+        public JsonBuildingRepositore jbr;
+        public IBuildingServices buildingService;
+
         public StartForm()
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
             this.MaximumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
             this.MaximizeBox = false;
+            jbr = new JsonBuildingRepositore();
+            buildingService = new BuildingService(jbr);
         } 
 
         private void openBuildingButton_Click(object sender, EventArgs e)
@@ -25,11 +30,9 @@ namespace access_system
             ofd.Filter = "JSON(*.json)|*.json";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                JsonBuildingRepositore jbr = new JsonBuildingRepositore();
-                IBuildingServices buildingService = new BuildingService(jbr);
                 buildingService.GetBuilding(ofd.FileName);
-                Building buildingForm = new Building(((BuildingService)buildingService).buildingEntity);
-                SecurityPostForm spf = new SecurityPostForm();
+                Building buildingForm = new Building(((BuildingService)buildingService).buildingEntity, (BuildingService)buildingService);
+                SecurityPostForm spf = new SecurityPostForm((BuildingService)buildingService);
                 spf.Show();
                 buildingForm.Show();
                 Hide(); 
@@ -38,7 +41,7 @@ namespace access_system
 
         private void newBuildingButton_Click(object sender, EventArgs e)
         {
-            NewBuildingCreationForm newBuildingCreationForm = new NewBuildingCreationForm();
+            NewBuildingCreationForm newBuildingCreationForm = new NewBuildingCreationForm((BuildingService)buildingService);
             newBuildingCreationForm.Show();
             Hide();
         }

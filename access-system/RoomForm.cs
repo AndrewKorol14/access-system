@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace access_system
@@ -27,7 +21,9 @@ namespace access_system
 
         private Button backButton;
 
-        public RoomForm(int roomNumber, string floor)
+        public Building buildingForm;
+
+        public RoomForm(int roomNumber, string floor, Building buildingForm)
         {
             this.roomNumber = roomNumber;
             this.floor = floor;
@@ -36,6 +32,8 @@ namespace access_system
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximizeBox = false;
+
+            this.buildingForm = buildingForm;
 
             panel = new Panel();
             panel.Location = new Point(0, 0);
@@ -94,7 +92,8 @@ namespace access_system
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            //Building buildingForm = new Building();
+            buildingForm.Show();
+            Close();
         }
 
         private void roomButton_Click(object sender, EventArgs e)

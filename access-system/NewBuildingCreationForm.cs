@@ -1,4 +1,5 @@
 ﻿using access_system.Entities;
+using Services;
 using System;
 using System.Windows.Forms;
 
@@ -10,14 +11,17 @@ namespace access_system
         private int _roomNumber;
 
         private readonly int _windowHeight = 460;
-        private readonly int _windowWidth = 710;        
+        private readonly int _windowWidth = 710;
 
-        public NewBuildingCreationForm()
+        public BuildingService buildingService;    
+
+        public NewBuildingCreationForm(BuildingService buildingService)
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
             this.MaximumSize = new System.Drawing.Size(_windowWidth, _windowHeight);
             this.MaximizeBox = false;
+            this.buildingService = buildingService;
         }
 
         private void floorAndRoomNumberTextBox_TextChanged(object sender, EventArgs e)
@@ -37,8 +41,8 @@ namespace access_system
             try
             {
                 BuildingEntity buildingEntity = new BuildingEntity(_floorNumber, _roomNumber);
-                Building building = new Building(buildingEntity);
-                SecurityPostForm spf = new SecurityPostForm();
+                Building building = new Building(buildingEntity, buildingService);
+                SecurityPostForm spf = new SecurityPostForm(buildingService);
                 building.Show();                
                 spf.Show();
                 Hide();

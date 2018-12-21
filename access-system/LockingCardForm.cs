@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace access_system
 {
     public partial class LockingCardForm : Form
     {
-        public LockingCardForm()
+        public BuildingService buildingService;
+
+        public SecurityPostForm spf;
+
+        public LockingCardForm(BuildingService buildingService, SecurityPostForm spf)
         {
             InitializeComponent();
+            this.buildingService = buildingService;
+            this.spf = spf;
         }
 
         private void LockingCardForm_Load(object sender, EventArgs e)
@@ -25,6 +32,12 @@ namespace access_system
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            spf.Show();
+            Hide();
         }
     }
 }
