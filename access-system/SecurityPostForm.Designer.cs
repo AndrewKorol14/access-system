@@ -99,6 +99,7 @@
             this.showPassButton.TabIndex = 4;
             this.showPassButton.Text = "Show all electronic pass";
             this.showPassButton.UseVisualStyleBackColor = false;
+            this.showPassButton.Click += new System.EventHandler(this.showPassButton_Click);
             // 
             // SecurityPostForm
             // 

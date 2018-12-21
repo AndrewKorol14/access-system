@@ -55,7 +55,16 @@ namespace access_system
 
         private void showLogButton_Click(object sender, EventArgs e)
         {
+            VisitingLogForm vlf = new VisitingLogForm(this);
+            vlf.Show();
+            Hide();
+        }
 
+        private void showPassButton_Click(object sender, EventArgs e)
+        {
+            ElectronicPassesForm epf = new ElectronicPassesForm(this);
+            epf.Show();
+            Hide();
         }
     }
 }
