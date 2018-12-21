@@ -84,6 +84,7 @@
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(137, 20);
             this.userNameTextBox.TabIndex = 3;
+            this.userNameTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
             // userSurnameTextBox
             // 
@@ -91,7 +92,7 @@
             this.userSurnameTextBox.Name = "userSurnameTextBox";
             this.userSurnameTextBox.Size = new System.Drawing.Size(137, 20);
             this.userSurnameTextBox.TabIndex = 4;
-            this.userSurnameTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.userSurnameTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
             // idTextBox
             // 
@@ -99,7 +100,7 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(137, 20);
             this.idTextBox.TabIndex = 5;
-            this.idTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.idTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
             // label4
             // 
@@ -133,6 +134,7 @@
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label5
             // 
@@ -148,7 +150,7 @@
             // 
             // userPositionComboBox
             // 
-            this.userPositionComboBox.BackColor = System.Drawing.Color.Black;
+            this.userPositionComboBox.BackColor = System.Drawing.Color.White;
             this.userPositionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.userPositionComboBox.FormattingEnabled = true;
             this.userPositionComboBox.Items.AddRange(new object[] {
@@ -161,6 +163,7 @@
             this.userPositionComboBox.Name = "userPositionComboBox";
             this.userPositionComboBox.Size = new System.Drawing.Size(137, 21);
             this.userPositionComboBox.TabIndex = 10;
+            this.userPositionComboBox.SelectedIndexChanged += new System.EventHandler(this.allField_Filled);
             // 
             // CardCreationForm
             // 
@@ -183,6 +186,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CardCreationForm";
             this.Text = "Card creation ";
+            this.Load += new System.EventHandler(this.CardCreationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

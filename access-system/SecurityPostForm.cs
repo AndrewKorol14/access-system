@@ -29,8 +29,9 @@ namespace access_system
 
         private void createCardButton_Click(object sender, EventArgs e)
         {
-            CardCreationForm cardCreationForm = new CardCreationForm(buildingService);
+            CardCreationForm cardCreationForm = new CardCreationForm(buildingService, this);
             cardCreationForm.Show();
+            Hide();
         }
 
         private void lockCardButton_Click(object sender, EventArgs e)
