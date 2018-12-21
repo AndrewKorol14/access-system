@@ -40,20 +40,15 @@ namespace access_system
         {
             try
             {
-                BuildingEntity buildingEntity = new BuildingEntity(_floorNumber, _roomNumber);
-                Building building = new Building(buildingEntity, buildingService);
-                SecurityPostForm spf = new SecurityPostForm(buildingService);
-                building.Show();                
-                spf.Show();
-                Hide();
-                /*if (Validator.CheckWhetherDigitIsEnteredInField(floorNumberTextBox.Text) && Validator.CheckWhetherDigitIsEnteredInField(roomNumberTextBox.Text))
+                if (floorNumberTextBox.Text != String.Empty && roomNumberTextBox.Text != String.Empty)
                 {
                     _floorNumber = Int32.Parse(floorNumberTextBox.Text);
                     _roomNumber = Int32.Parse(roomNumberTextBox.Text);
-                    Building building = new Building(_floorNumber, _roomNumber, new Utils.BuildingAndComponents.Building(_floorNumber, _roomNumber));
-                    SecurityPostForm spf = new SecurityPostForm();
-                    building.L
-                    building.Show();
+                    BuildingEntity buildingEntity = new BuildingEntity(_floorNumber, _roomNumber);
+                    Building buildingForm = new Building(buildingEntity, buildingService);
+                    SecurityPostForm spf = new SecurityPostForm(buildingService);
+                    spf.Show();
+                    buildingForm.Show();                    
                     Hide();
                 }
                 else
@@ -67,9 +62,9 @@ namespace access_system
                         floorNumberTextBox.Clear();
                         roomNumberTextBox.Clear();
                     }
-                }*/
+                }
             }
-            catch(ArgumentException ex)
+            catch(Exception ex)
             {
                 string messageTitle = "Invalid number of floors or rooms";
                 string message = "You enter invalid number of floors or rooms. Please, input correct values";
