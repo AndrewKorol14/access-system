@@ -1,121 +1,130 @@
 ﻿using access_system.IServices;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using access_system.Entities;
 using access_system.Enums;
 using IRepositories;
+using System;
+using Repositories;
 
 namespace Services
 {
-    public class BuildingService : IBuildingServices
+    public class BuildingService : IBuildingServic
     {
-        public BuildingEntity buildingEntity;
-        private IBuildingRepositore repositore;
+        
+        public IBuildingRepositore Repositore { get; set; }
+        public IFloorServic FloorServic { get; set; }
+        public IVisitingLogsServic VisitingLogsServic { get; set; }
+        public ISecurityPostServic SecurityPostServic { get; set; }
+        public IAccesModeServices AccesModeServices { get; set; }
+        public ILockServic LockServic { get; set; }
+        public ILogsEntryServic LogsEntryServic { get; set; }
+        public IRoomServic RoomServic { get; set; }
+        public IUserServices UserServices { get; set; }
+
+        public BuildingEntity Building { get; set; }
+
+        public BuildingService(BuildingEntity building)
+        {
+            Repositore = new JsonBuildingRepositore();
+            AccesModeServices = new AccesModeServices();
+            LockServic = new LockServices(AccesModeServices);
+            RoomServic = new RoomServic(LockServic);
+            FloorServic = new FloorServic(RoomServic);
+            UserServices = new UserServices();
+            LogsEntryServic = new LogsEntryServic(UserServices, RoomServic);
+            VisitingLogsServic = new VisitingLogsServic(LogsEntryServic);
+            SecurityPostServic = new SecurityPostServic(UserServices);
+        }
 
         public BuildingService(IBuildingRepositore repositore)
         {
-            this.repositore = repositore;
+            Repositore = repositore;
+            AccesModeServices = new AccesModeServices();
+            LockServic = new LockServices(AccesModeServices);
+            RoomServic = new RoomServic(LockServic);
+            FloorServic = new FloorServic(RoomServic);
+            UserServices = new UserServices();
+            LogsEntryServic = new LogsEntryServic(UserServices, RoomServic);
+            VisitingLogsServic = new VisitingLogsServic(LogsEntryServic);
+            SecurityPostServic = new SecurityPostServic(UserServices);
         }
 
         public void AddAccesModifierForRoom(UserTypes type, int roomNumber, int floorNumber)
         {
-            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomLock.CategoriesWithAccess.TypesUsersWithAccess.Add(type);
+            FloorServic.Floor = Building.Floors[floorNumber];
+            FloorServic.AddAccesModifierForRoom(type, roomNumber);          
         }
 
         public bool AddPassForUser(int passNumber, int userId)
         {
-            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
-            {
-                foreach (ElectronicPassEntity nextPass in nextUser.ElectronicPasses)
-                {
-                    if (nextPass.CardNumber == passNumber)
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
-            {
-                if (nextUser.UniqeID == userId)
-                {
-                    nextUser.ElectronicPasses.Add(buildingEntity.SecurityPost.ElectronicPasses.Where(next => next.CardNumber == passNumber).Single());
-                    break;
-                }
-            }
-            return true;
+            SecurityPostServic.SecurityPost = Building.SecurityPost;
+            return SecurityPostServic.AddPassForUser(passNumber, userId);
         }
 
         public void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName)
         {
-            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomName = roomName;
-            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomType = roomType;
+            FloorServic.Floor = Building.Floors[floorNumber];
+            FloorServic.AddRoomDescription(roomNumber, roomType, roomName);
         }
 
         public bool AddUserToSystem(string FirsName, string LastName, int uniqeID)
         {
-            foreach (UserEntity nextUser in buildingEntity.SecurityPost.Users)
-            {
-                if (nextUser.UniqeID == uniqeID)
-                {
-                    return false;
-                }
-            }
-            buildingEntity.SecurityPost.Users.Add(new UserEntity(FirsName, LastName, uniqeID));
-            return true;
+            SecurityPostServic.SecurityPost = Building.SecurityPost;
+            return SecurityPostServic.AddUserToSystem(FirsName, LastName, uniqeID);
         }
 
         public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber, int floorNumber)
         {
-            buildingEntity.Floors[floorNumber].Rooms[roomNumber].RoomLock.UsersWhithUniqueAccess.Add(user.UniqeID);
+            FloorServic.Floor = Building.Floors[floorNumber];
+            FloorServic.AddUserWithUniqAccessForRoom(user, roomNumber);           
         }
 
         public void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus)
         {
-            foreach (ElectronicPassEntity nextPass in buildingEntity.SecurityPost.ElectronicPasses)
-            {
-                if (nextPass.CardNumber == passNumber)
-                {
-                    nextPass.BlockingStatus = newStatus;
-                    break;
-                }
-            }
+            SecurityPostServic.SecurityPost = Building.SecurityPost;
+            SecurityPostServic.ChangePassBlockingStatus(passNumber, newStatus);
         }
 
         public bool CreateElectronicPass(PassBlocking passStatus, int cardNumber)
         {
-            foreach (ElectronicPassEntity nextPass in buildingEntity.SecurityPost.ElectronicPasses)
-            {
-                if (nextPass.CardNumber == cardNumber)
-                {
-                    return false;
-                }
-            }
-            buildingEntity.SecurityPost.ElectronicPasses.Add(new ElectronicPassEntity(passStatus, cardNumber));
-            return true;
+            SecurityPostServic.SecurityPost = Building.SecurityPost;
+            return SecurityPostServic.CreateElectronicPass(passStatus, cardNumber);
         }
 
         public string EmulateEntrance(int userId, int floorNumber, int roomNumber)
         {
-            return null;
+            if (floorNumber <= Building.FloorNumber && roomNumber <= Building.RoomsNumber && floorNumber >= 0 && roomNumber >= 0)
+            {
+                LogEntryEntity entry;
+                FloorServic.Floor = Building.Floors[floorNumber];
+                VisitingLogsServic.VisitingLog = Building.VisitingLogs;
+                entry = FloorServic.EmulateEntranceToRoom(GetUserById(userId), roomNumber);
+                VisitingLogsServic.AddLogsEntry(entry);
+                LogsEntryServic.LogEntry = entry;
+                return LogsEntryServic.GetInfoAboutLogEntry();
+            }
+            throw new System.ArgumentException("Unable to simulate input with given parameters");
+        }
+
+        public UserEntity GetUserById(int userId)
+        {
+            SecurityPostServic.SecurityPost = Building.SecurityPost;
+            return SecurityPostServic.GetUser(userId);
         }
 
         public void SetBuilding(BuildingEntity building)
         {
-            buildingEntity = building;
+            Building = building;
         }
 
         public void SaveBuildingToFile(string pathToFile)
         {
-            repositore.SetBuilding(pathToFile, buildingEntity);
+            Repositore.SetBuilding(pathToFile, Building);
         }
 
-        void IBuildingServices.GetBuilding(string wayToFile)
+        public void GetBuilding(string wayToFile)
         {
-            buildingEntity = repositore.GetBuilding(wayToFile);
+            Building = Repositore.GetBuilding(wayToFile);
         }
     }
 }

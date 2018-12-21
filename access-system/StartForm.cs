@@ -12,7 +12,7 @@ namespace access_system
         private readonly int _windowWidth = 710;
 
         public JsonBuildingRepositore jbr;
-        public IBuildingServices buildingService;
+        public IBuildingServic buildingService;
 
         public StartForm()
         {

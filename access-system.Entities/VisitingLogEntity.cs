@@ -4,6 +4,6 @@ namespace access_system.Entities
 {
     public class VisitingLogEntity
     {
-        private List<LogEntryEntity> _logsEntries;
+        public List<LogEntryEntity> LogsEntries { get; set; }
     }
 }

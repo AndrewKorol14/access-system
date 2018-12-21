@@ -40,10 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesModeServices.cs" />
     <Compile Include="BuildingService.cs" />
+    <Compile Include="FloorServic.cs" />
     <Compile Include="LockCreator.cs" />
+    <Compile Include="LockServices.cs" />
+    <Compile Include="LogsEntryServic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartService.cs" />
+    <Compile Include="RoomServic.cs" />
+    <Compile Include="SecurityPostServic.cs" />
+    <Compile Include="UserServices.cs" />
+    <Compile Include="VisitingLogsServic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\access-system.Entities\access-system.Entities.csproj">
@@ -61,6 +68,10 @@
     <ProjectReference Include="..\access-system.IServices\access-system.IServices.csproj">
       <Project>{7eb4261c-7f00-4f39-aa84-b6c7e9c00dbc}</Project>
       <Name>access-system.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\access-system.Repositories\access-system.Repositories.csproj">
+      <Project>{C66E19B5-AA6E-407D-8B6F-8747DE572526}</Project>
+      <Name>access-system.Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

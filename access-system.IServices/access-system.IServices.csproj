@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBuildingServices.cs" />
-    <Compile Include="ISecurityPostServices1.cs" />
-    <Compile Include="IStartService.cs" />
+    <Compile Include="IAccesModeServices.cs" />
+    <Compile Include="IBuildingServic.cs" />
+    <Compile Include="IFloorServic.cs" />
+    <Compile Include="ILockServic.cs" />
+    <Compile Include="ILogsEntryServic.cs" />
+    <Compile Include="IRoomServic.cs" />
+    <Compile Include="ISecurityPostServic.cs" />
+    <Compile Include="IUserServices.cs" />
+    <Compile Include="IVisitingLogsServic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

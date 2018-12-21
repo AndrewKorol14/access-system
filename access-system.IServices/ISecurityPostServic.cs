@@ -3,8 +3,10 @@ using access_system.Enums;
 
 namespace access_system.IServices
 {
-    public interface ISecurityPostServices
+    public interface ISecurityPostServic
     {
+        SecurityPostEntity SecurityPost { get; set;}
+
         bool CreateElectronicPass(PassBlocking passStatus, int cardNumber);
 
         bool AddUserToSystem(string FirsName, string LastName, int uniqeID);

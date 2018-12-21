@@ -54,9 +54,9 @@
     <Compile Include="BuildingAndComponents\SecurityPost.cs" />
     <Compile Include="BuildingAndComponents\VisitingLogs.cs" />
     <Compile Include="ElectronicPass.cs" />
-    <Compile Include="Enums\PassBlocking.cs" />
-    <Compile Include="Enums\RoomTypes.cs" />
-    <Compile Include="Enums\UserTypes.cs" />
+    <Compile Include="BuildingAndComponents\Enums\PassBlocking.cs" />
+    <Compile Include="BuildingAndComponents\Enums\RoomTypes.cs" />
+    <Compile Include="BuildingAndComponents\Enums\UserTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Readers\IReader.cs" />
     <Compile Include="Readers\JsonReader.cs" />

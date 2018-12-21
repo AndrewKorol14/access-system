@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace access_system.IServices
 {
-    public interface IBuildingServices
+    public interface IBuildingServic
     {
-       void GetBuilding(string wayToFile);
+        BuildingEntity Building { get;  set;}
+
+        void GetBuilding(string wayToFile);
 
         void AddRoomDescription(int floorNumber, int roomNumber, RoomTypes roomType, string roomName);
 
