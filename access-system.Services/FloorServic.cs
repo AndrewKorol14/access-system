@@ -33,8 +33,8 @@ namespace Services
 
         public void AddRoomDescription(int roomNumber, RoomTypes roomType, string roomName)
         {
-            Floor.Rooms[roomNumber - 1].RoomType = roomType;
-            Floor.Rooms[roomNumber - 1].RoomName = roomName;
+            Floor.Rooms[roomNumber].RoomType = roomType;
+            Floor.Rooms[roomNumber].RoomName = roomName;
         }
 
         public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber)
