@@ -35,7 +35,6 @@ namespace Services
         {
             Floor.Rooms[roomNumber].RoomType = roomType;
             Floor.Rooms[roomNumber].RoomName = roomName;
-            Floor.Rooms[roomNumber].RoomType = roomType;
         }
 
         public void AddUserWithUniqAccessForRoom(int userId, int roomNumber)

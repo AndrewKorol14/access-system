@@ -20,9 +20,9 @@ namespace Services
         public string GetUserInfo()
         {
             StringBuilder userInfo = new StringBuilder();
-            userInfo.Append("FirstName:" + User.FirsName);
-            userInfo.Append("LastName" + User.LastName);
-            userInfo.Append("UserType:" + User.UserType.ToString());
+            userInfo.Append(" FirstName: " + User.FirsName);
+            userInfo.Append(" LastName " + User.LastName);
+            userInfo.Append(" UserType: " + User.UserType.ToString());
             return userInfo.ToString();
         }
     }

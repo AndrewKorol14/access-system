@@ -41,7 +41,7 @@ namespace access_system.IServices
         public string GetInfoAboutRoom()
         {
             StringBuilder roomInfo = new StringBuilder();
-            roomInfo.Append("room: " + Room.RoomName + " floor:" + Room.FloorNumber + " roomNumber:" + Room.RoomName);
+            roomInfo.Append(" room: " + Room.RoomName + " floor: " + Room.FloorNumber + " roomNumber: " + Room.RoomName);
             return roomInfo.ToString();
         }
     }
