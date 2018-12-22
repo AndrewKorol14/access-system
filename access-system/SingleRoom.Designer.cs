@@ -129,6 +129,8 @@
             // 
             this.roomTypeComboBox.FormattingEnabled = true;
             this.roomTypeComboBox.Items.AddRange(new object[] {
+            "General",
+            "Classroom",
             "Common Access",
             "Laboratory",
             "Lection Room",
@@ -203,7 +205,7 @@
             this.saveButton.BackColor = System.Drawing.Color.DarkOrange;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(623, 28);
+            this.saveButton.Location = new System.Drawing.Point(563, 28);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(82, 32);
             this.saveButton.TabIndex = 21;

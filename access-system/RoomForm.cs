@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -23,7 +24,9 @@ namespace access_system
 
         public Building buildingForm;
 
-        public RoomForm(int roomNumber, string floor, Building buildingForm)
+        public BuildingService buildingService;
+
+        public RoomForm(int roomNumber, string floor, Building buildingForm, BuildingService buildingService)
         {
             this.roomNumber = roomNumber;
             this.floor = floor;
@@ -32,6 +35,8 @@ namespace access_system
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximizeBox = false;
+
+            this.buildingService = buildingService;
 
             this.buildingForm = buildingForm;
 
@@ -93,7 +98,7 @@ namespace access_system
         private void backButton_Click(object sender, EventArgs e)
         {
             buildingForm.Show();
-            Close();
+            Hide();
         }
 
         private void roomButton_Click(object sender, EventArgs e)
@@ -101,7 +106,7 @@ namespace access_system
             var button = (Button)sender;
             if (button != null)
             {
-                SingleRoom singleRoom = new SingleRoom(button.Text, floor, this);
+                SingleRoom singleRoom = new SingleRoom(button.Text, floor, this, buildingService);
                 singleRoom.Show();
                 Hide();
             }

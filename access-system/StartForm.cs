@@ -31,7 +31,7 @@ namespace access_system
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 buildingService.GetBuilding(ofd.FileName);
-                Building buildingForm = new Building(((BuildingService)buildingService).buildingEntity, (BuildingService)buildingService);
+                Building buildingForm = new Building(((BuildingService)buildingService).Building, (BuildingService)buildingService);
                 SecurityPostForm spf = new SecurityPostForm((BuildingService)buildingService);
                 spf.Show();
                 buildingForm.Show();
