@@ -1,4 +1,6 @@
-﻿using System;
+﻿using access_system.Enums;
+using Services;
+using System;
 using System.Windows.Forms;
 
 namespace access_system
@@ -13,12 +15,16 @@ namespace access_system
 
         public RoomForm roomForm;
 
-        public SingleRoom(string title, string floorNumber, RoomForm roomForm)
+        public BuildingService buildingService;
+
+        public SingleRoom(string title, string floorNumber, RoomForm roomForm, BuildingService buildingService)
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximizeBox = false;
+
+            this.buildingService = buildingService;
 
             this.roomForm = roomForm;
             this.Text = title;
@@ -51,6 +57,19 @@ namespace access_system
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if(roomNameTextBox.Text != String.Empty)
+            {
+                switch(roomNameTextBox.Text)
+                {
+                    case "Office": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.OfficeSpace, roomNameTextBox.Text); break;
+                    case "Staff Only": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.StaffOnly, roomNameTextBox.Text); break;
+                    case "Laboratory": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.Laboratory, roomNameTextBox.Text); break;
+                    case "Lection Room": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.LectureRoom, roomNameTextBox.Text); break;
+                    case "Classroom": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.Classroom, roomNameTextBox.Text); break;
+                    case "General": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.GeneralPurpose, roomNameTextBox.Text); break;
+                    default: buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.RoomTypeIsNotDefined, roomNameTextBox.Text); break;
+                }               
+            }            
             roomForm.Show();
             Hide();
         }

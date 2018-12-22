@@ -70,7 +70,7 @@ namespace access_system
             var button = (Button)sender;
             if(button != null)
             {
-                RoomForm roomForm = new RoomForm(roomsNumber, button.Text, this);
+                RoomForm roomForm = new RoomForm(roomsNumber, button.Text, this, buildingService);
                 roomForm.Show();
                 Hide();
             }
