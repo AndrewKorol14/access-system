@@ -15,6 +15,7 @@ namespace Services
 
         public VisitingLogsServic(ILogsEntryServic logsEntryServic)
         {
+            VisitingLog = new VisitingLogEntity();
             LogsEntryServic = logsEntryServic;
         }
     
