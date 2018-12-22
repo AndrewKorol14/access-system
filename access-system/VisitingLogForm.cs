@@ -27,8 +27,8 @@ namespace access_system
         public VisitingLogForm(SecurityPostForm spf, BuildingService buildingService)
         {
             InitializeComponent();
-            this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
-            this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            //this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
+            //this.MaximumSize = new System.Drawing.Size(windowWidth, windowHeight);
             this.MaximizeBox = false;
 
             this.spf = spf;

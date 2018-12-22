@@ -30,7 +30,7 @@ namespace access_system
 
             this.spf = spf;
 
-            electronicPassesLabel.Text = "Electronic Passes";
+            //electronicPassesLabel.Text = ;
 
             backButton = new Button();
             backButton.Width = backButtonWidth;

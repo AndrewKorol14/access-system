@@ -35,7 +35,7 @@
             // visitingLogLabel
             // 
             this.visitingLogLabel.AutoSize = true;
-            this.visitingLogLabel.Location = new System.Drawing.Point(175, 104);
+            this.visitingLogLabel.Location = new System.Drawing.Point(12, 19);
             this.visitingLogLabel.Name = "visitingLogLabel";
             this.visitingLogLabel.Size = new System.Drawing.Size(0, 13);
             this.visitingLogLabel.TabIndex = 0;

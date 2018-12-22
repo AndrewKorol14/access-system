@@ -124,8 +124,6 @@
             this.electronicPassComboBox.BackColor = System.Drawing.Color.White;
             this.electronicPassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.electronicPassComboBox.FormattingEnabled = true;
-            this.electronicPassComboBox.Items.AddRange(new object[] {
-            "Test"});
             this.electronicPassComboBox.Location = new System.Drawing.Point(266, 59);
             this.electronicPassComboBox.Name = "electronicPassComboBox";
             this.electronicPassComboBox.Size = new System.Drawing.Size(299, 21);

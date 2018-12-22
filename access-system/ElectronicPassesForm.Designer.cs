@@ -35,7 +35,7 @@
             // electronicPassesLabel
             // 
             this.electronicPassesLabel.AutoSize = true;
-            this.electronicPassesLabel.Location = new System.Drawing.Point(253, 104);
+            this.electronicPassesLabel.Location = new System.Drawing.Point(12, 20);
             this.electronicPassesLabel.Name = "electronicPassesLabel";
             this.electronicPassesLabel.Size = new System.Drawing.Size(35, 13);
             this.electronicPassesLabel.TabIndex = 0;

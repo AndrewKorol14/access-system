@@ -73,8 +73,15 @@ namespace access_system
                     case "General": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.GeneralPurpose, roomNameTextBox.Text); break;
                     default: buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.RoomTypeIsNotDefined, roomNameTextBox.Text); break;
                 }
+
+                switch (roomNameTextBox.Text)
+                {
+                    case "Student": buildingService.AddAccesModifierForRoom(UserTypes.Student, _roomNumber, _floorNumber); break;
+                }
+
                 buildingService.AddUserWithUniqAccessForRoom(accessModeCheckedListBox.SelectedIndex, _roomNumber, _floorNumber);               
-            }            
+            }
+            buildingService.SaveBuildingToFile("C:\\Users\\Public\\Documents\\building.json");
             roomForm.Show();
             Hide();
         }
