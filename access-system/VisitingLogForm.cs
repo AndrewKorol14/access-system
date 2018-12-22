@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,9 @@ namespace access_system
 
         private Button backButton;
 
-        public VisitingLogForm(SecurityPostForm spf)
+        public BuildingService buildingService;
+
+        public VisitingLogForm(SecurityPostForm spf, BuildingService buildingService)
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
@@ -30,7 +33,9 @@ namespace access_system
 
             this.spf = spf;
 
-            visitingLogLabel.Text = "Visiting log";
+            this.buildingService = buildingService;
+
+            //visitingLogLabel.Text = buildingService.;
 
             backButton = new Button();
             backButton.Width = backButtonWidth;

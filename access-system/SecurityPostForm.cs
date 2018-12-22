@@ -55,7 +55,7 @@ namespace access_system
 
         private void showLogButton_Click(object sender, EventArgs e)
         {
-            VisitingLogForm vlf = new VisitingLogForm(this);
+            VisitingLogForm vlf = new VisitingLogForm(this, buildingService);
             vlf.Show();
             Hide();
         }

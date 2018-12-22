@@ -35,8 +35,6 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.userSurnameTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lockCheckBox = new System.Windows.Forms.CheckBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.userPositionComboBox = new System.Windows.Forms.ComboBox();
@@ -102,27 +100,6 @@
             this.idTextBox.TabIndex = 5;
             this.idTextBox.TextChanged += new System.EventHandler(this.allField_Filled);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(208, 245);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Lock/Unlock:";
-            // 
-            // lockCheckBox
-            // 
-            this.lockCheckBox.AutoSize = true;
-            this.lockCheckBox.Location = new System.Drawing.Point(325, 248);
-            this.lockCheckBox.Name = "lockCheckBox";
-            this.lockCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.lockCheckBox.TabIndex = 7;
-            this.lockCheckBox.UseVisualStyleBackColor = true;
-            // 
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.DarkOrange;
@@ -174,8 +151,6 @@
             this.Controls.Add(this.userPositionComboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.lockCheckBox);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.userSurnameTextBox);
             this.Controls.Add(this.userNameTextBox);
@@ -201,8 +176,6 @@
         private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.TextBox userSurnameTextBox;
         private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox lockCheckBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox userPositionComboBox;
