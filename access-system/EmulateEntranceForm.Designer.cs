@@ -103,6 +103,7 @@
             this.emulateButton.TabIndex = 7;
             this.emulateButton.Text = "Emulate";
             this.emulateButton.UseVisualStyleBackColor = false;
+            this.emulateButton.Click += new System.EventHandler(this.emulateButton_Click);
             // 
             // backButton
             // 

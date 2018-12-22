@@ -12,6 +12,12 @@ namespace access_system
 
         private int userID;
 
+        private int passCode;
+
+        private bool locking;
+
+
+
         public BuildingService buildingService;
 
         public SecurityPostForm spf;
@@ -30,7 +36,7 @@ namespace access_system
 
         private void allField_Filled(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text != String.Empty && userSurnameTextBox.Text != String.Empty && idTextBox.Text != String.Empty && userPositionComboBox.Text != String.Empty)
+            if (userNameTextBox.Text != String.Empty && userSurnameTextBox.Text != String.Empty && idTextBox.Text != String.Empty && userPositionComboBox.Text != String.Empty/* && passCodeTextBox.Text != String.Empty*/)
             {
                 saveButton.Enabled = true;
             }
@@ -55,6 +61,16 @@ namespace access_system
                 case "Staff": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.ServiceStaff); break;
                 case "Student": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Student); break;
                 case "Teacher": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Teacher); break;
+            }
+            passCode = Int32.Parse(passCodeTextBox.Text);
+            locking = lockCheckBox.Checked;
+            if(locking)
+            {
+                buildingService.CreateElectronicPass(PassBlocking.Locked, passCode);
+            }
+            else
+            {
+                buildingService.CreateElectronicPass(PassBlocking.Unlocked, passCode);
             }
             spf.Show();
             Close();
