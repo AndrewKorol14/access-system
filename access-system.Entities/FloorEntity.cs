@@ -14,7 +14,7 @@ namespace access_system.Entities
             RoomNumber = roomsNumber;
             FloorNumber = floorNumber;
             Rooms = new List<RoomEntity>();
-            for (int i = 1; i <= roomsNumber; i++)
+            for (int i = 0; i <= roomsNumber; i++)
             {
                 Rooms.Add(new RoomEntity(i, floorNumber, null, RoomTypes.RoomTypeIsNotDefined));
             }
