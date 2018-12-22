@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Services;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace access_system
@@ -7,10 +9,14 @@ namespace access_system
     {
         private readonly int windowHeight = 460;
         private readonly int windowWidth = 710;
-
+        
         public SecurityPostForm spf;
 
-        public EmulateEntranceForm(SecurityPostForm spf)
+        public BuildingService bs;
+
+        private List<int> passList;
+
+        public EmulateEntranceForm(SecurityPostForm spf, BuildingService bs)
         {
             InitializeComponent();
             this.MinimumSize = new System.Drawing.Size(windowWidth, windowHeight);
@@ -18,6 +24,13 @@ namespace access_system
             this.MaximizeBox = false;
 
             this.spf = spf;
+            this.bs = bs;
+
+            passList = bs.GetAllUserId();
+            for(int i =0; i<passList.Count; i++)
+            {
+                electronicPassComboBox.Items.Add(passList[0]);
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -46,6 +59,13 @@ namespace access_system
         private void EmulateEntranceForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             spf.Show();
+        }
+
+        private void emulateButton_Click(object sender, EventArgs e)
+        {
+            bs.EmulateEntrance(Int32.Parse(electronicPassComboBox.Text), Int32.Parse(floorNumberTextBox.Text), Int32.Parse(roomNumberTextBox.Text));
+            spf.Show();
+            Hide();
         }
     }
 }

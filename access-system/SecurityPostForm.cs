@@ -43,7 +43,7 @@ namespace access_system
 
         private void emulateEntranceButton_Click(object sender, EventArgs e)
         {
-            EmulateEntranceForm emulateEntranceForm = new EmulateEntranceForm(this);
+            EmulateEntranceForm emulateEntranceForm = new EmulateEntranceForm(this, buildingService);
             emulateEntranceForm.Show();
             Hide();
         }

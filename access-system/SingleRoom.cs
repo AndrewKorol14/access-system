@@ -32,7 +32,11 @@ namespace access_system
             roomNumberLabel2.Text = _roomNumber.ToString();
             _floorNumber = Int32.Parse(floorNumber.Split(' ')[1]);
             floorNumberLabel.Text = _floorNumber.ToString();
+            
 
+            roomNameTextBox.Text = buildingService.Building.Floors[_floorNumber].Rooms[_roomNumber].RoomName;
+            roomTypeComboBox.Text = buildingService.Building.Floors[_floorNumber].Rooms[_roomNumber].RoomType.ToString();
+            //accessModeCheckedListBox[""].Select();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,7 +72,8 @@ namespace access_system
                     case "Classroom": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.Classroom, roomNameTextBox.Text); break;
                     case "General": buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.GeneralPurpose, roomNameTextBox.Text); break;
                     default: buildingService.AddRoomDescription(_floorNumber, _roomNumber, RoomTypes.RoomTypeIsNotDefined, roomNameTextBox.Text); break;
-                }               
+                }
+                buildingService.AddUserWithUniqAccessForRoom(accessModeCheckedListBox.SelectedIndex, _roomNumber, _floorNumber);               
             }            
             roomForm.Show();
             Hide();

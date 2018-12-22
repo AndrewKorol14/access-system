@@ -34,8 +34,14 @@ namespace access_system
             this.spf = spf;
 
             this.buildingService = buildingService;
-
-            //visitingLogLabel.Text = buildingService.;
+            List<string> logs = buildingService.GetVisitingLogs();
+            StringBuilder str = new StringBuilder();
+            for (int i = 0; i < logs.Count; i++)
+            {
+                str.Append(logs[i]);
+                str.Append('\n');
+            }
+            visitingLogLabel.Text = str.ToString();
 
             backButton = new Button();
             backButton.Width = backButtonWidth;

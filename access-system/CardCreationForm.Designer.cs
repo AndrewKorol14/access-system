@@ -38,6 +38,10 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.userPositionComboBox = new System.Windows.Forms.ComboBox();
+            this.passCodeTextBox = new System.Windows.Forms.TextBox();
+            this.passCodeLabel = new System.Windows.Forms.Label();
+            this.lockCheckBox = new System.Windows.Forms.CheckBox();
+            this.lockLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +109,7 @@
             this.saveButton.BackColor = System.Drawing.Color.DarkOrange;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(268, 292);
+            this.saveButton.Location = new System.Drawing.Point(267, 315);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(82, 32);
             this.saveButton.TabIndex = 8;
@@ -142,12 +146,56 @@
             this.userPositionComboBox.TabIndex = 10;
             this.userPositionComboBox.SelectedIndexChanged += new System.EventHandler(this.allField_Filled);
             // 
+            // passCodeTextBox
+            // 
+            this.passCodeTextBox.Location = new System.Drawing.Point(325, 244);
+            this.passCodeTextBox.Name = "passCodeTextBox";
+            this.passCodeTextBox.Size = new System.Drawing.Size(137, 20);
+            this.passCodeTextBox.TabIndex = 11;
+            // 
+            // passCodeLabel
+            // 
+            this.passCodeLabel.AutoSize = true;
+            this.passCodeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.passCodeLabel.ForeColor = System.Drawing.Color.Black;
+            this.passCodeLabel.Location = new System.Drawing.Point(220, 245);
+            this.passCodeLabel.Name = "passCodeLabel";
+            this.passCodeLabel.Size = new System.Drawing.Size(67, 15);
+            this.passCodeLabel.TabIndex = 12;
+            this.passCodeLabel.Text = "Pass code:";
+            // 
+            // lockCheckBox
+            // 
+            this.lockCheckBox.AutoSize = true;
+            this.lockCheckBox.Location = new System.Drawing.Point(351, 286);
+            this.lockCheckBox.Name = "lockCheckBox";
+            this.lockCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.lockCheckBox.TabIndex = 13;
+            this.lockCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // lockLabel
+            // 
+            this.lockLabel.AutoSize = true;
+            this.lockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lockLabel.ForeColor = System.Drawing.Color.Black;
+            this.lockLabel.Location = new System.Drawing.Point(231, 286);
+            this.lockLabel.Name = "lockLabel";
+            this.lockLabel.Size = new System.Drawing.Size(53, 15);
+            this.lockLabel.TabIndex = 14;
+            this.lockLabel.Text = "Locking:";
+            // 
             // CardCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(557, 359);
+            this.Controls.Add(this.lockLabel);
+            this.Controls.Add(this.lockCheckBox);
+            this.Controls.Add(this.passCodeLabel);
+            this.Controls.Add(this.passCodeTextBox);
             this.Controls.Add(this.userPositionComboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.saveButton);
@@ -179,5 +227,9 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox userPositionComboBox;
+        private System.Windows.Forms.TextBox passCodeTextBox;
+        private System.Windows.Forms.Label passCodeLabel;
+        private System.Windows.Forms.CheckBox lockCheckBox;
+        private System.Windows.Forms.Label lockLabel;
     }
 }
