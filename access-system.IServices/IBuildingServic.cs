@@ -26,7 +26,7 @@ namespace access_system.IServices
 
         bool CreateElectronicPass(PassBlocking passStatus, int cardNumber);
 
-        bool AddUserToSystem(string FirsName, string LastName, int uniqeID);
+        bool AddUserToSystem(string FirsName, string LastName, int uniqeID, UserTypes type);
 
         bool AddPassForUser(int passNumber, int userId);
 
