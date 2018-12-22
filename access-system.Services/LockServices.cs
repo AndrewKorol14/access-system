@@ -26,10 +26,10 @@ namespace Services
             AccesModeServices.AddTypeOfUser(type);
         }
 
-        public void AddUserWithUniqAccess(UserEntity user)
+        public void AddUserWithUniqAccess(int userId)
         {
             AccesModeServices.AccessMode = Lock.CategoriesWithAccess;
-            Lock.UsersWhithUniqueAccess.Add(user.UniqeID);
+            Lock.UsersWhithUniqueAccess.Add(userId);
         }
 
         public bool CheckUserAccess(UserEntity user)

@@ -9,7 +9,7 @@ namespace access_system.IServices
 
         void AddAccesModifier(UserTypes type);
 
-        void AddUserWithUniqAccess(UserEntity user);
+        void AddUserWithUniqAccess(int userId);
 
         bool CheckUserAccess(UserEntity user);
     }

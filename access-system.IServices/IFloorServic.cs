@@ -14,7 +14,7 @@ namespace access_system.IServices
 
         void AddRoomDescription(int roomNumber, RoomTypes roomType, string roomName);
 
-        void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber);
+        void AddUserWithUniqAccessForRoom(int userId, int roomNumber);
 
         void AddAccesModifierForRoom(UserTypes type, int roomNumber);
 

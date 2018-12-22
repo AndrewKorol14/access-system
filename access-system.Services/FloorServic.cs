@@ -27,7 +27,7 @@ namespace Services
 
         public void AddAccesModifierForRoom(UserTypes type, int roomNumber)
         {
-            RoomServic.Room = Floor.Rooms[roomNumber - 1];
+            RoomServic.Room = Floor.Rooms[roomNumber];
             RoomServic.AddAccesModifierForRoom(type);
         }
 
@@ -37,15 +37,15 @@ namespace Services
             Floor.Rooms[roomNumber].RoomName = roomName;
         }
 
-        public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber)
+        public void AddUserWithUniqAccessForRoom(int userId, int roomNumber)
         {
-            RoomServic.Room = Floor.Rooms[roomNumber - 1];
-            RoomServic.AddUserWithUniqAccessForRoom(user);
+            RoomServic.Room = Floor.Rooms[roomNumber];
+            RoomServic.AddUserWithUniqAccessForRoom(userId);
         }
 
         public LogEntryEntity EmulateEntranceToRoom(UserEntity user, int roomNumber)
         {
-            RoomServic.Room = Floor.Rooms[roomNumber - 1];
+            RoomServic.Room = Floor.Rooms[roomNumber];
             return RoomServic.LoginAttempt(user);
         }
     }

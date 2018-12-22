@@ -74,10 +74,10 @@ namespace Services
             return SecurityPostServic.AddUserToSystem(FirsName, LastName, uniqeID, type);
         }
 
-        public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber, int floorNumber)
+        public void AddUserWithUniqAccessForRoom(int userId, int roomNumber, int floorNumber)
         {
             FloorServic.Floor = Building.Floors[floorNumber];
-            FloorServic.AddUserWithUniqAccessForRoom(user, roomNumber);           
+            FloorServic.AddUserWithUniqAccessForRoom(userId, roomNumber);           
         }
 
         public void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus)

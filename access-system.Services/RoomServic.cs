@@ -21,10 +21,10 @@ namespace access_system.IServices
             LockServic = lockServic;
         }
 
-        public void AddUserWithUniqAccessForRoom(UserEntity user)
+        public void AddUserWithUniqAccessForRoom(int userId)
         {
             LockServic.Lock = Room.RoomLock;
-            LockServic.AddUserWithUniqAccess(user);
+            LockServic.AddUserWithUniqAccess(userId);
         }
 
         public LogEntryEntity LoginAttempt(UserEntity user)

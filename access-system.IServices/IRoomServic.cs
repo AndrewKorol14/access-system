@@ -13,6 +13,6 @@ namespace access_system.IServices
 
         void AddAccesModifierForRoom(UserTypes type);
 
-        void AddUserWithUniqAccessForRoom(UserEntity user);
+        void AddUserWithUniqAccessForRoom(int userId);
     }
 }
