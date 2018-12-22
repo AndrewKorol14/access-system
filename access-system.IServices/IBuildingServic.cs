@@ -31,5 +31,7 @@ namespace access_system.IServices
         bool AddPassForUser(int passNumber, int userId);
 
         void ChangePassBlockingStatus(int passNumber, PassBlocking newStatus);
+
+        List<string> GetVisitingLogs();
     }
 }

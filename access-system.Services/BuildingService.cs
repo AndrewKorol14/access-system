@@ -5,6 +5,7 @@ using access_system.Enums;
 using IRepositories;
 using System;
 using Repositories;
+using System.Collections.Generic;
 
 namespace Services
 {
@@ -125,6 +126,12 @@ namespace Services
         public void GetBuilding(string wayToFile)
         {
             Building = Repositore.GetBuilding(wayToFile);
+        }
+
+        public List<string> GetVisitingLogs()
+        {
+            VisitingLogsServic.VisitingLog = Building.VisitingLogs;
+            return VisitingLogsServic.GetLogsInformation();
         }
     }
 }
