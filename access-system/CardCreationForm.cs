@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using access_system.Enums;
+using Services;
 using System;
 using System.Windows.Forms;
 
@@ -47,7 +48,14 @@ namespace access_system
         private void saveButton_Click(object sender, EventArgs e)
         {
             userID = Int32.Parse(idTextBox.Text);
-            buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID);
+            switch (userPositionComboBox.Text)
+            {
+                case "Administration": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Administration); break;
+                case "Security": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Security); break;
+                case "Staff": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.ServiceStaff); break;
+                case "Student": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Student); break;
+                case "Teacher": buildingService.AddUserToSystem(userNameTextBox.Text, userSurnameTextBox.Text, userID, UserTypes.Teacher); break;
+            }
             spf.Show();
             Close();
         }
