@@ -47,7 +47,7 @@ namespace access_system
                     BuildingEntity buildingEntity = new BuildingEntity(_floorNumber, _roomNumber);
                     Building buildingForm = new Building(buildingEntity, buildingService);
                     SecurityPostForm spf = new SecurityPostForm(buildingService);
-                    //buildingService.SaveBuildingToFile();
+                    buildingService.SaveBuildingToFile("E:\\");
                     spf.Show();
                     buildingForm.Show();                    
                     Hide();
