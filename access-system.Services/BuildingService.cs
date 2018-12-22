@@ -67,10 +67,10 @@ namespace Services
             FloorServic.AddRoomDescription(roomNumber, roomType, roomName);
         }
 
-        public bool AddUserToSystem(string FirsName, string LastName, int uniqeID)
+        public bool AddUserToSystem(string FirsName, string LastName, int uniqeID, UserTypes type)
         {
             SecurityPostServic.SecurityPost = Building.SecurityPost;
-            return SecurityPostServic.AddUserToSystem(FirsName, LastName, uniqeID);
+            return SecurityPostServic.AddUserToSystem(FirsName, LastName, uniqeID, type);
         }
 
         public void AddUserWithUniqAccessForRoom(UserEntity user, int roomNumber, int floorNumber)

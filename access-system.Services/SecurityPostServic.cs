@@ -44,7 +44,7 @@ namespace Services
             return true;
         }
 
-        public bool AddUserToSystem(string FirsName, string LastName, int uniqeID)
+        public bool AddUserToSystem(string FirsName, string LastName, int uniqeID, UserTypes type)
         {
             foreach (UserEntity nextUser in SecurityPost.Users)
             {
@@ -53,7 +53,7 @@ namespace Services
                     return false;
                 }
             }
-            SecurityPost.Users.Add(new UserEntity(FirsName, LastName, uniqeID));
+            SecurityPost.Users.Add(new UserEntity(FirsName, LastName, uniqeID, type));
             return true;
         }
 

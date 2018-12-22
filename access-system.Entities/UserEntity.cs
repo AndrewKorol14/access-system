@@ -15,11 +15,12 @@ namespace access_system.Entities
         public int UniqeID { get; private set; }
         public UserTypes UserType { get; private set; }
 
-        public UserEntity(string FirsName, string LastName, int uniqeID)
+        public UserEntity(string FirsName, string LastName, int uniqeID, UserTypes type)
         {
             this.FirsName = FirsName;
             this.LastName = LastName;
             UniqeID = uniqeID;
+            UserType = type;
             ElectronicPasses = new List<ElectronicPassEntity>();
         }
     }
