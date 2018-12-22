@@ -133,5 +133,16 @@ namespace Services
             VisitingLogsServic.VisitingLog = Building.VisitingLogs;
             return VisitingLogsServic.GetLogsInformation();
         }
+
+        public List<int> GetAllUserId()
+        {
+            List<int> userId = new List<int>();
+            foreach (UserEntity nextUser in Building.SecurityPost.Users)
+            {
+                userId.Add(nextUser.UniqeID);
+            }
+
+            return userId;
+        }
     }
 }

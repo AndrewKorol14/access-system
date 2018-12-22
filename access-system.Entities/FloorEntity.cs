@@ -5,7 +5,7 @@ namespace access_system.Entities
 {
    public class FloorEntity
     {
-        public List<RoomEntity> Rooms;
+        public List<RoomEntity> Rooms { get; set; }
         public int FloorNumber { get; set; }
         public int RoomNumber { get; set; }
 
